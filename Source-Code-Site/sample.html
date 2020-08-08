@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+
+  </head>
+  <body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<input id="filter1" type="text">
+
+<div id="header">
+  <div class="header">
+    <p>ID</p>
+    <p>Manufacturer</p>
+    <p>Type</p>
+    <p>PS</p>
+  </div>
+</div>
+
+<div id="resultsvvv">
+  <div class="results">
+    <p>1</p>
+    <p>Toyota</p>
+    <p>C 200</p>
+    <p>114</p>
+  </div>
+  <div class="results">
+    <p>2</p>
+    <p>Mercedes</p>
+    <p>C 220</p>
+    <p>146</p>
+  </div>
+</div>
+
+  <script>
+  $("#filter1").keyup(function() {
+    var filter = $(this).val(),
+  count = 0;
+  $('#resultsvvv div').each(function() {
+  if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+    $(this).hide();
+  } else {
+    $(this).show();
+    count++;
+  }
+});
+
+});
+  </script>
+
+  </body>
+</html>
