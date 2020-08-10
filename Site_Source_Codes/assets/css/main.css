@@ -1,0 +1,341 @@
+			*{
+				margin: 0;
+			}
+
+			/*====== Nav Bar Styles start=======*/
+
+			.Top-navigation-bar {
+				overflow: hidden;
+				background-color: #fff;
+				box-shadow: 0px 1px 10px 3px rgba(0,0,0,0.12);
+				position: fixed;
+				width: 100%;
+				height: auto;
+				padding: 0.8% 0.75%;
+				transition: height .5s ease-in-out;
+			}
+			.navigation-bar-logo{
+				float: left;
+				width: 204px;
+				height: 98%;
+				margin: 11px 0px 0px 25px;
+			}
+			.navigation-bar-search{
+				margin: auto;
+				width: 40%
+			}
+			.unervisal-search-input{
+				height: 37px;
+				background: rgba(240, 240, 240, 0.5);
+				border-radius: 7px 0px 0px 7px;
+				padding-left: 12px;
+				width: 80%;
+				float: left;
+				border-top: 1px solid #E0E0E0;
+				border-bottom:  1px solid #E0E0E0;
+				border-left:  1px solid #E0E0E0;
+				border-right: 0px solid #E0E0E0;
+			}
+			.unervisal-search-button{
+				height: 41px;
+				font-size:17px;
+				font-weight: 400;
+				padding: 0 17px;
+				background: rgba(240, 240, 240, 0.5);
+				float: left;
+				cursor: pointer;
+				border-radius: 0px 7px 7px 0px;
+				border-top: 1px solid #E0E0E0;
+				border-bottom:  1px solid #E0E0E0;
+				border-right:  1px solid #E0E0E0;
+				border-left:  0px solid #E0E0E0;
+				color: #9E9E9E;
+			}
+			.unervisal-search-button-question{
+				background: #fff;
+				font-size:12px;
+				font-weight: 400;
+				float: left;
+				cursor: pointer;
+				border-radius: 50px;
+				border: 2px solid #B0B0B0;
+				color: #B0B0B0;
+				margin: 11px 0px 0px 20px ;
+				transition: all .2s ease-in-out;
+			}
+			.unervisal-search-button-question:hover{
+				color: #000;
+				border: 2px solid #000;
+			}
+			.navigation-bar-login-div{
+				float: right;
+			}
+			.navigation-bar-sign-in-button{
+				 background: white ;
+				 border: none;
+				 color: #767676;
+				 padding: 8px 15px;
+				 font-size: 14px;
+				 transition: all .2s ease-in-out;
+				 margin: 4px 0px;
+				 cursor: pointer;
+			}
+			.navigation-bar-sign-in-button:hover{
+				color: #000;
+			}
+			.navigation-bar-sign-up-button{
+			 	 background: rgba(0,0,0,.04) ;
+			   color: #767676;
+			   padding: 8px 15px;
+			   font-size: 14px;
+			   transition: all .2s ease-in-out;
+				 margin: 4px 25px 0px 0px;
+				 border-radius: 40px;
+				 cursor: pointer;
+				 border: none;
+			}
+			.navigation-bar-sign-up-button:hover{
+				color: #000;
+				background: #EEEEEE;
+			}
+			/*====== Nav Bar Styles end =======*/
+
+			.left-main-div{
+				 width: 25%;
+				 height: auto;
+				 float: left;
+			}
+			.left-second-div{
+			 background: white;
+			 border-radius: 7px;
+			 border: 1px solid #E0E0E0;
+			 width: 90%;
+			 height:auto;
+			 margin: 5% 5% 10%  ;
+			 transition: box-shadow 0.4s ease;
+			}
+			.left-second-div:hover{
+			 box-shadow: 0px 1px 15px 3px rgba(0,0,0,0.12);
+			}
+			.right-main-div{
+				height:auto;
+			 	width:75%;
+				float:right;
+			}
+			.main-title{
+				margin:20px;
+				font-family: 'YT Sans', 'Roboto', 'Arial', sans-serif;
+				font-size: 25px;
+				font-weight: 600;
+				line-height: 32px;
+			}
+			.video-main-div{
+				background: white;
+				border-radius: 7px;
+				border: 1px solid #E0E0E0;
+				width: 92%;
+				height: auto;
+				margin: 1.5%;
+				float: left;
+				padding: 2%;
+				overflow: hidden;
+				transition: box-shadow 0.4s ease;
+			}
+			.video-main-div:hover{
+			 box-shadow: 0px 1px 15px 3px rgba(0,0,0,0.12);
+			}
+			.video-main-image-tab{
+				width:30%;
+				float:left;
+			}
+			.video-main-content-tab{
+				width:65%;
+				float:left;
+				margin: 0 0 0 4%;
+			}
+			.video-main-image{
+				width: 100%;
+				margin:25px 0 0 0  ;
+			}
+			.video-image-sub-text{
+				margin: 10px 0 0;
+				color: #A1A1A1;
+				font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+				font-size: 10px;
+				text-align: right;
+			}
+			.video-main-heading{
+			font-family: Tahoma, Geneva, sans-serif;
+			font-size: 20px;
+			margin: 20px 0;
+			}
+			.video-sub-text{
+			margin: 20px 0;
+			color: #A1A1A1;
+			font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+			}
+		.video-main-button{
+				 background-color: white ;
+			   border:  1px solid #559EFF;
+			   color: #559EFF;
+			   padding: 7px 15px;
+			   font-size: 15px;
+			   transition: 0.3s;
+				 margin: 0px 20px 10px 0px;
+				 font-weight: bold;
+				 font-family: 'Nunito', sans-serif;
+				 border-radius: 7px;
+				 cursor: pointer;
+			 }
+		.video-main-button:hover {
+			background: rgba(85, 158, 255,0.1)
+			 }
+		.iweb-main-button{
+		 		background-color: white ;
+		 	   border:  1px solid #559EFF;
+		 	   color: #559EFF;
+		 	   padding: 7px 15px;
+		 	   font-size: 15px;
+		 	   transition: 0.3s;
+		 		 font-weight: bold;
+		 		 font-family: 'Nunito', sans-serif;
+		 		 border-radius: 4px;
+		 		 cursor: pointer;
+		 	 }
+		.iweb-main-button:hover {
+		 	background: rgba(85, 158, 255,0.1);
+		 	 }
+
+		.iweb-second-button{
+			background-color: #559EFF ;
+			 border:  1px solid #559EFF;
+			 color: white;
+			 padding: 7px 15px;
+			 font-size: 15px;
+			 transition: 0.3s;
+			 font-weight: bold;
+			 font-family: 'Nunito', sans-serif;
+			 border-radius: 4px;
+			 cursor: pointer;
+		}
+		.iweb-second-button:hover {
+			background: rgba(85, 158, 255,0.8);
+			border:  1px solid  rgba(85, 158, 255,0.8);
+			 }
+	 	 .search-box-input{
+			 		width: 85%;
+				 	height: 40px;
+				 	background: #fff;
+				 	border-radius: 7px;
+			  	border: 1px solid #E0E0E0;
+					margin: 0px 5% 5px;
+					padding-left: 12px;
+			 }
+			 #search-box-div {
+				 width: 90%;
+				 padding: 5px 0;
+				 text-align: ;
+				 background-color: none;
+				 margin:0 5%;
+				 display:block;
+			 }
+			 #search-box-list {
+				 list-style-type: none;
+				 padding: 0;
+				 margin: 0;
+				 width:100%;
+			 }
+			 #search-box-list li a {
+				 margin-top: -1px;
+				 padding: 15px;
+				 text-decoration: none;
+				 font-size: 14px;
+				 color: #757575;
+				 display: block;
+				 transition: .4s color;
+			 }
+			 #search-box-list li a:hover:not(.header) {
+				 background-color: #eee
+				 width:100%;
+			 }
+			 #search-box-list li a:hover{
+				 color: #559EFF;
+			 }
+			 .src-list{
+				 width:100%;
+				 font-family: 'Nunito', sans-serif;
+				 font-size:13px;
+				 font-weight: 400;
+				 border-bottom-style: solid;
+				 border-bottom-color: #E0E0E0;
+				 border-bottom-width: 1px;
+			 }
+
+			 			 						/* responsive */
+		@media screen and (max-width: 1023px) {
+				.left-main-div{
+					display: none;
+				}
+				.right-main-div{
+					width:100%;
+				}
+				.main-title{
+					margin: 5px 0 5px 20px;
+				}
+		}
+
+		@media screen and (max-width: 889px) {
+			.unervisal-search-button-question{
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 600px) {
+
+				 .main-title{
+					 text-align: center;
+					 margin: 10px;
+					 font-size: 20px;
+				 }
+				 .video-main-div{
+					 width: 83%;
+					 margin: 3%;
+					 padding: 5%;
+					 text-align: center;
+					 box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.12);
+					 border:  0px solid #559EFF;
+				 }
+				 .video-main-image-tab{
+					 width:100%;
+				 }
+				 .video-main-content-tab{
+					 width:100%;
+					 float:left;
+					 margin: 0 ;
+				 }
+				 .video-main-image{
+					 width: 100%;
+					 margin: 10px 0 0 0
+				 }
+				 .video-main-button{
+				 		 margin: 5px;
+				 }
+					.video-main-heading{
+				 	font-size: 15px;
+				 	}
+				 	.video-sub-text{
+						font-size: 11px;
+				 	}
+					.video-main-button{
+						   padding: 7px 15px;
+						   font-size: 12px;
+							 margin: 0px 7px 12px ;
+			 		 }
+				 }
+
+		@media screen and (max-width: 320px) {
+
+			body{
+				width: 320px;
+			}
+		}
