@@ -21,7 +21,7 @@
 							<div class="navigation-bar-logo">
 								<img src="assets\images\logo.png" alt="Logo">
 							</div>
-							<button type="button"  onclick="searchboxshowhidefunction()" class="unervisal-search-button-question"><i class="fa fa-search"></i></button>
+							<button type="button" class="unervisal-search-button-question"><i class="fa fa-search"></i></button>
 							<button type="button" class="unervisal-search-button-question"> <i class="fa fa-user-circle"></i></button>
 						<div class="navigation-bar-search" id="navigation-bar-search-div-function">
 							<input type="text" class="unervisal-search-input" id="uni-src-inp" type="search" placeholder="Search For Videos, Titles, uploaded data ect.">
@@ -446,17 +446,22 @@
 				<!-- Full Search Filter Script End  -->
 				<!-- search box show hide start -->
 			<script>
-				function searchboxshowhidefunction() {
-  			var x = document.getElementById("navigation-bar-search-div-function");
-  			if (x.style.display === "none") {
-    		x.style.display = "block";
-  		} else {
-    			x.style.display = "none";
-  			}
-			}
+			$(".unervisal-search-button-question").click(function() {
+					$('#navigation-bar-search-div-function').fadeToggle('');
+			});
+
 		</script>
 		<!-- search box show hide start -->
-
+		<script>
+			function searchboxshowhidefunction() {
+			var x = document.getElementById("navigation-bar-search-div-function");
+			if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+				x.style.display = "none";
+			}
+		}
+	</script>
 
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
