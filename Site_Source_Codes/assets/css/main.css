@@ -11,8 +11,9 @@
 				position: fixed;
 				width: 100%;
 				height: auto;
-				padding: 0.8% 0.75%;
-				transition: height .5s ease-in-out;
+				padding: 11px 0.75%;
+				/* padding: 0.8% 0.75%; */
+				transition: all .5s ease-in-out;
 			}
 			.navigation-bar-logo{
 				float: left;
@@ -50,6 +51,28 @@
 				border-right:  1px solid #E0E0E0;
 				border-left:  0px solid #E0E0E0;
 				color: #9E9E9E;
+			}
+			.unervisal-search-button-Toggle{
+				background: #fff;
+				font-size:20px;
+				font-weight: 400;
+				float: right;
+				color: #B0B0B0;
+				transition: all .2s ease-in-out;
+				display: none;
+				border: none;
+				padding: 10px;
+			}
+			.navigation-bar-login-div-Toggle{
+				background: #fff;
+				font-size:20px;
+				font-weight: 400;
+				float: right;
+				color: #B0B0B0;
+				transition: all .2s ease-in-out;
+				display: none;
+				border: none;
+				padding: 10px;
 			}
 			.unervisal-search-button-question{
 				background: #fff;
@@ -314,6 +337,27 @@
 			.unervisal-search-button-question{
 				display: none;
 			}
+			.unervisal-search-button-Toggle{
+				display: block;
+			}
+			.navigation-bar-login-div-Toggle{
+				display:block;
+			}
+			.navigation-bar-search{
+				display: none;
+			}
+			.navigation-bar-login-div{
+				display: none;
+			}
+		}
+
+		@media screen and (min-width: 889px) {
+			.navigation-bar-search{
+				display: block;
+			}
+			.navigation-bar-login-div{
+				display: block;
+			}
 		}
 
 		@media screen and (max-width: 600px) {
@@ -356,7 +400,7 @@
 						   padding: 7px 15px;
 						   font-size: 12px;
 							 margin: 0px 7px 12px ;
-			 		 }
+			 		}
 				 }
 
 		@media screen and (max-width: 320px) {

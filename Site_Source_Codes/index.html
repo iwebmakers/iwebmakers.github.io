@@ -21,14 +21,14 @@
 			<div class="navigation-bar-logo">
 				<img src="assets\images\logo.png" alt="Logo">
 			</div>
-			<button id="search-action" type="button" class="unervisal-search-button-question"><i class="fa fa-search"></i></button>
-			<button type="button" class="unervisal-search-button-question"> <i class="fa fa-user-circle"></i></button>
+			<button id="search-action" type="button" class="unervisal-search-button-Toggle"><i class="fa fa-search"></i></button>
+			<button type="button" class="navigation-bar-login-div-Toggle" onclick="loginboxshowhidefunction()"> <i class="fa fa-user-circle"></i></button>
 			<div class="navigation-bar-search" id="navigation-bar-search-div-function">
 				<input type="text" class="unervisal-search-input" id="uni-src-inp" type="search" placeholder="Search For Videos, Titles, uploaded data ect.">
 				<button id="uni-btn" type="button" name="button" class="unervisal-search-button"><i class="fa fa-search"></i></button>
 			</div>
 			<button type="button" class="unervisal-search-button-question"> <i class="fa fa-question"></i></button>
-			<div class="navigation-bar-login-div">
+			<div class="navigation-bar-login-div" id="navigation-bar-login-div-function">
 				<button class="navigation-bar-sign-in-button">Sign in</button>
 				<button class="navigation-bar-sign-up-button">Sign Up Free</button>
 			</div>
@@ -36,6 +36,7 @@
 		<!-- Nav Bar End-->
 
 		<div style="height:100%; width:100%; float:left; margin-top:80px;">
+
 			<div class="left-main-div">
 
 				<!-- search box Start -->
@@ -395,8 +396,6 @@
 
 		</div>
 
-
-
 		<!-- Search Filter Script Start  -->
 		<script>
 		function mysearchlistFunction() {
@@ -453,13 +452,26 @@
 
 		<!-- Full Search Filter Script End  -->
 
+		<!-- login box show hide start -->
+		<script>
+		function loginboxshowhidefunction() {
+  			var x = document.getElementById("navigation-bar-login-div-function");
+  	if (x.style.display === "none") {
+    		x.style.display = "block";
+  	} else {
+    	x.style.display = "none";
+  	}
+		}
+		</script>
+		<!-- login box show hide end -->
+
 		<!-- Search box show hide start -->
 		<script>
-		$(".unervisal-search-button-question").click(function() {
+		$(".unervisal-search-button-Toggle").click(function() {
 			$('#navigation-bar-search-div-function').fadeToggle();
 		});
 		</script>
-		<!-- Search box show hide start -->
+
 		<script>
 		function searchboxshowhidefunction() {
 			var x = document.getElementById("navigation-bar-search-div-function");
@@ -470,6 +482,8 @@
 			}
 		}
 		</script>
+
+		<!-- Search box show hide end -->
 
 		<script type="text/javascript">
 			$(".search-action").click(function() {
