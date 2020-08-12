@@ -418,26 +418,35 @@
 		<!-- Search Filter Script End  -->
 
 		<!-- Full Search Filter Script Start  -->
-		<script>
-		$("#search-action").click(function() {
+		<script type="text/javascript">
+		$("#uni-btn").click(function() {
+			// Retrieve the input field text and reset the count to zero
 			var filter = $('#uni-src-inp').val(),
 			count = 0;
-			$('.video-main-div').each(function() {
-				if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-					$(this).fadeOut();
-				}
-				// else if ($(this).text().search(new RegExp(filter, "i")) == 0) {
-				// 	$('.search-no-result').fadeIn();
-				// }
-				else{
-					$('.video-main-div').fadeIn('slow');
+
+				// If the list item does not contain the text phrase fade it out
+				if ($('.video-main-div').text().search(new RegExp(filter, "i")) < 0) {
+					$('.video-main-div').slideUp('fast');  // MY CHANGE
+
+					// Show the list item if the phrase matches and increase the count by 1
+				}else {
+					$('.video-main-div').slideDown('fast'); // MY CHANGE
 					count++;
 				}
-			});
+
+
+
 		});
+
+		// $("#uni-src-inp").keyup(function() {
+		// 	if ($('.video-main-div').text().search(new RegExp(filter, "i")) < 0) {
+		// 		$('.search-no-result').slideUp('fast');  // MY CHANGE
+		// 	}
+		//
+		// });
 		</script>
 
-			<script>
+			<!-- <script>
 		// 	var a = document.getElementById("elemA");
 		// var b = document.getElementById("elemB");
 		//
@@ -450,7 +459,7 @@
 		// console.log("elemB exists");
 		// else
 		// console.log("elemB does not exist");
-		</script>
+		</script> -->
 
 		<!-- Full Search Filter Script End  -->
 
@@ -473,18 +482,6 @@
 			$('#navigation-bar-search-div-function').fadeToggle();
 		});
 		</script>
-
-		<script>
-		function searchboxshowhidefunction() {
-			var x = document.getElementById("navigation-bar-search-div-function");
-			if (x.style.display === "none") {
-				x.style.display = "block";
-			} else {
-				x.style.display = "none";
-			}
-		}
-		</script>
-
 		<!-- Search box show hide end -->
 
 		<script type="text/javascript">
