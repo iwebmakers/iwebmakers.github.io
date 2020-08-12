@@ -272,7 +272,20 @@
 			 }
 
 			 .search-no-result{
-				 background: blue;
+			  background: blue;
+			  border-radius: 7px;
+ 				border: 1px solid #E0E0E0;
+				display: none;
+ 				width: 92%;
+ 				height: 200px;
+ 				margin: 1.5%;
+ 				float: left;
+ 				padding: 2%;
+ 				overflow: hidden;
+ 				transition: box-shadow 0.4s ease;
+			 }
+			 .search-one-result{
+				 background: green;
 				 border-radius: 7px;
  				border: 1px solid #E0E0E0;
  				width: 92%;
