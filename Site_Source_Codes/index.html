@@ -423,11 +423,13 @@
 			var filter = $('#uni-src-inp').val(),
 			count = 0;
 			$('.video-main-div').each(function() {
-				if ($('.video-main-div').text().search(new RegExp(filter, "i")) < 0) {
-					$('.video-main-div').fadeOut();
-				}else if ($('.video-main-div').text().search(new RegExp(filter, "i")) == 0) {
-					$('.search-no-result').fadeIn();
-				}else{
+				if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+					$(this).fadeOut();
+				}
+				// else if ($(this).text().search(new RegExp(filter, "i")) == 0) {
+				// 	$('.search-no-result').fadeIn();
+				// }
+				else{
 					$('.video-main-div').fadeIn('slow');
 					count++;
 				}
