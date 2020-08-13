@@ -19,7 +19,7 @@
 				float: left;
 				width: 204px;
 				height: 98%;
-				margin: 11px 0px 0px 25px;
+				margin: 11px 25px 0px 25px;
 			}
 			.navigation-bar-search{
 				margin: auto;
@@ -73,6 +73,7 @@
 				display: none;
 				border: none;
 				padding: 10px;
+				margin: 0 10px;
 			}
 			.unervisal-search-button-question{
 				background: #fff;
@@ -319,7 +320,6 @@
  				overflow: hidden;
  				transition: box-shadow 0.4s ease;
 			 }
-
 			 			 						/* responsive */
 		@media screen and (max-width: 1023px) {
 				.left-main-div{
@@ -331,32 +331,22 @@
 				.main-title{
 					margin: 5px 0 5px 20px;
 				}
+				.unervisal-search-button-question{
+					display: none;
+				}
 		}
-
-		@media screen and (max-width: 889px) {
-			.unervisal-search-button-question{
-				display: none;
-			}
-			.unervisal-search-button-Toggle{
-				display: block;
-			}
+		@media screen and (max-width: 839px) {
 			.navigation-bar-login-div-Toggle{
 				display:block;
 			}
-			.navigation-bar-search{
-				display: none;
-			}
 			.navigation-bar-login-div{
 				display: none;
 			}
-		}
-
-		@media screen and (min-width: 889px) {
 			.navigation-bar-search{
-				display: block;
+				width: 100%;
 			}
-			.navigation-bar-login-div{
-				display: block;
+			.unervisal-search-input{
+				width: 50%
 			}
 		}
 
