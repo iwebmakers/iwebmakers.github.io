@@ -1,5 +1,6 @@
 			*{
 				margin: 0;
+				outline: none;
 			}
 
 			/*====== Nav Bar Styles start=======*/
@@ -12,7 +13,6 @@
 				width: 100%;
 				height: auto;
 				padding: 11px 0.75%;
-				/* padding: 0.8% 0.75%; */
 				transition: all .5s ease-in-out;
 			}
 			.navigation-bar-logo{
@@ -51,6 +51,10 @@
 				border-right:  1px solid #E0E0E0;
 				border-left:  0px solid #E0E0E0;
 				color: #9E9E9E;
+				transition: all .2s ease-in-out;
+			}
+			.unervisal-search-button:hover{
+				color: #000;
 			}
 			.unervisal-search-button-Toggle{
 				background: #fff;
@@ -62,6 +66,12 @@
 				display: none;
 				border: none;
 				padding: 10px;
+			}
+			.unervisal-search-button-Toggle:hover{
+				color: #000;
+			}
+			.navigation-bar-login-div-Toggle:hover{
+				color: #000;
 			}
 			.navigation-bar-login-div-Toggle{
 				background: #fff;
