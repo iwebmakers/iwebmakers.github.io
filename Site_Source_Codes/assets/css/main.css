@@ -23,19 +23,20 @@
 			}
 			.navigation-bar-search{
 				margin: auto;
-				width: 40%;
+				width: 50%;
 			}
 			.unervisal-search-input{
 				height: 37px;
 				background: rgba(240, 240, 240, 0.5);
-				border-radius: 7px 0px 0px 7px;
-				padding-left: 12px;
-				width: 80%;
+				border-radius: 50px 0px 0px 50px;
+				padding-left: 16px;
+				width: 77%;
 				float: left;
 				border-top: 1px solid #E0E0E0;
 				border-bottom:  1px solid #E0E0E0;
 				border-left:  1px solid #E0E0E0;
 				border-right: 0px solid #E0E0E0;
+				transition: all .2s ease-in-out;
 			}
 			.unervisal-search-button{
 				height: 41px;
@@ -45,7 +46,7 @@
 				background: rgba(240, 240, 240, 0.5);
 				float: left;
 				cursor: pointer;
-				border-radius: 0px 7px 7px 0px;
+				border-radius: 0px 50px 50px 0px;
 				border-top: 1px solid #E0E0E0;
 				border-bottom:  1px solid #E0E0E0;
 				border-right:  1px solid #E0E0E0;
@@ -53,9 +54,19 @@
 				color: #9E9E9E;
 				transition: all .2s ease-in-out;
 			}
+			/* search box hover effect start*/
 			.unervisal-search-button:hover{
 				color: #000;
 			}
+			.unervisal-search-input:focus{
+				background: #fff;
+				border-color: #8B8B8B;
+			}
+			.unervisal-search-input:focus ~ .unervisal-search-button{
+				background: #fff;
+				border-color: #8B8B8B;
+			}
+			/* search box hover effect end*/
 			.unervisal-search-button-Toggle{
 				background: #fff;
 				font-size:20px;
@@ -123,7 +134,7 @@
 			   padding: 8px 15px;
 			   font-size: 14px;
 			   transition: all .2s ease-in-out;
-				 margin: 4px 25px 0px 0px;
+				 margin: 4px 25px 4px 0px;
 				 border-radius: 40px;
 				 cursor: pointer;
 				 border: none;
@@ -199,35 +210,36 @@
 				text-align: right;
 			}
 			.video-main-heading{
-			font-family: Tahoma, Geneva, sans-serif;
-			font-size: 20px;
+		 	font-family: Trebuchet, Trebuchet MS, Tahoma, Arial, sans-serif;
+			font-size: 21px;
 			margin: 20px 0;
+			color: #133B4F;
 			}
 			.video-sub-text{
 			margin: 20px 0;
-			color: #A1A1A1;
+			color: #7F7F7F;
 			font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 			}
 		.video-main-button{
 				 background-color: white ;
-			   border:  1px solid #559EFF;
-			   color: #559EFF;
+			   border:  1px solid #0085FA;
+			   color: #0085FA;
 			   padding: 7px 15px;
 			   font-size: 15px;
 			   transition: 0.3s;
 				 margin: 0px 20px 10px 0px;
 				 font-weight: bold;
 				 font-family: 'Nunito', sans-serif;
-				 border-radius: 7px;
+				 border-radius: 50px;
 				 cursor: pointer;
 			 }
 		.video-main-button:hover {
-			background: rgba(85, 158, 255,0.1)
+			background: rgba(0, 133, 250, 0.05)
 			 }
 		.iweb-main-button{
 		 		background-color: white ;
-		 	   border:  1px solid #559EFF;
-		 	   color: #559EFF;
+		 	   border:  1px solid #0085FA;
+		 	   color: #0085FA;
 		 	   padding: 7px 15px;
 		 	   font-size: 15px;
 		 	   transition: 0.3s;
@@ -237,12 +249,12 @@
 		 		 cursor: pointer;
 		 	 }
 		.iweb-main-button:hover {
-		 	background: rgba(85, 158, 255,0.1);
+		 	background: rgba(0, 133, 250, 0.1);
 		 	 }
 
 		.iweb-second-button{
-			background-color: #559EFF ;
-			 border:  1px solid #559EFF;
+			background-color: #0085FA ;
+			 border:  1px solid #0085FA;
 			 color: white;
 			 padding: 7px 15px;
 			 font-size: 15px;
@@ -297,7 +309,7 @@
 				 width:100%;
 			 }
 			 #search-box-list li a:hover{
-				 color: #559EFF;
+				 color: #0085FA;
 			 }
 			 .src-list{
 				 width:100%;
@@ -323,7 +335,7 @@
  				transition: box-shadow 0.4s ease;
 			 }
 			 .search-one-result{
-				 background: green;
+				 background: white;
 				 border-radius: 7px;
  				border: 1px solid #E0E0E0;
  				width: 92%;
@@ -334,7 +346,7 @@
  				overflow: hidden;
  				transition: box-shadow 0.4s ease;
 			 }
-			 			 						/* responsive */
+			 			 			/* responsive */
 		@media screen and (max-width: 1023px) {
 				.left-main-div{
 					display: none;
@@ -345,30 +357,32 @@
 				.main-title{
 					margin: 5px 0 5px 20px;
 				}
-				.unervisal-search-button-question{
-					display: none;
-				}
+				.navigation-bar-search{
+					width: 40%;
 		}
-		@media screen and (max-width: 839px) {
+		@media screen and (max-width: 855px) {
 			.navigation-bar-login-div-Toggle{
 				display:block;
 			}
 			.navigation-bar-login-div{
 				display: none;
 				width: 100%;
-				margin-top: 20px;
+				margin-top: 13px;
+				text-align: right;
 			}
 			.navigation-bar-search{
 				width: 90%;
 			}
 			.unervisal-search-input{
-				width: 50%;
-			}
-			.navigation-bar-login-div-two{
-				float: right;
+				width: 49%;
 			}
 			.navigation-bar-sign-up-button{
 				margin-right: 20px;
+			}
+		}
+		@media screen and (max-width: 765px) {
+			.unervisal-search-button-question{
+				display: none;
 			}
 		}
 		@media screen and (max-width: 700px) {
@@ -380,7 +394,6 @@
 			}
 		}
 		@media screen and (max-width: 600px) {
-
 				 .main-title{
 					 text-align: center;
 					 margin: 10px;
@@ -392,7 +405,7 @@
 					 padding: 5%;
 					 text-align: center;
 					 box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.12);
-					 border:  0px solid #559EFF;
+					 border:  0px solid #0085FA;
 				 }
 				 .video-main-image-tab{
 					 width:100%;
@@ -431,17 +444,28 @@
 						margin-top: 50px;
 						}
 					.unervisal-search-input{
-						width: 79.5%;
+						width: 78.5%;
 						margin-left: 10px;
 					}
 					.unervisal-search-button{
 						width: 13%;
+						margin-right: 10px;
+					}
+					.navigation-bar-login-div{
+						text-align: center;
+					}
+					.navigation-bar-sign-up-button{
+						margin: 4px 0;
 					}
 			 }
-
-		@media screen and (max-width: 355px) {
-
-			body{
-				width: 355px;
+			@media screen and (max-width: 480px) {
+				.unervisal-search-input{
+				width: 76.5%;
+				}
 			}
-		}
+			@media screen and (max-width: 355px) {
+
+				body{
+					width: 355px;
+				}
+			}
