@@ -36,7 +36,7 @@
 				border-bottom:  1px solid #E0E0E0;
 				border-left:  1px solid #E0E0E0;
 				border-right: 0px solid #E0E0E0;
-				transition: all .2s ease-in-out;
+				transition: background .2s ease-in-out;
 			}
 			.unervisal-search-button{
 				height: 41px;
@@ -52,7 +52,8 @@
 				border-right:  1px solid #E0E0E0;
 				border-left:  0px solid #E0E0E0;
 				color: #9E9E9E;
-				transition: all .2s ease-in-out;
+				transition: color .2s ease-in-out;
+				transition: background .2s ease-in-out;
 			}
 			/* search box hover effect start*/
 			.unervisal-search-button:hover{
@@ -380,7 +381,7 @@
 				margin-right: 20px;
 			}
 		}
-		@media screen and (max-width: 765px) {
+		@media screen and (max-width: 776px) {
 			.unervisal-search-button-question{
 				display: none;
 			}
@@ -390,7 +391,7 @@
 				width: 90%;
 			}
 			.unervisal-search-input{
-				width: 40%
+				width: 38%
 			}
 		}
 		@media screen and (max-width: 600px) {
