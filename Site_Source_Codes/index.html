@@ -422,46 +422,61 @@
 		<!-- Full Search Filter Script Start  -->
 		<script type="text/javascript">
 		$("#uni-btn").click(function() {
+		// $("#uni-src-inp").keyup(function() {
 			// Retrieve the input field text and reset the count to zero
+
 			var filter = $('#uni-src-inp').val(),
 			count = 0;
+			var allHidden = true;
+
+			// Loop through the comment list
+			$('.video-main-div').each(function() {
+
+				if($(this).is(':visible'))
+			  {
+			   allHidden = false;
+
+			    //break out of each looping function as soon as first visible div is found
+			  }
 
 				// If the list item does not contain the text phrase fade it out
-				if ($('.video-main-div').text().search(new RegExp(filter, "i")) < 0) {
-					$('.video-main-div').slideUp('fast');  // MY CHANGE
+				if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+					$(this).fadeOut();  // MY CHANGE
+
 
 					// Show the list item if the phrase matches and increase the count by 1
-				}else {
-					$('.video-main-div').slideDown('fast'); // MY CHANGE
+				} else {
+					$(this).fadeIn(); // MY CHANGE
 					count++;
+
+
 				}
+			});
 
-
+			if(allHidden)
+			 $('.search-no-result').css('display','block');
+			else
+			 $('.search-no-result').css('display','none');
 
 		});
-
-		// $("#uni-src-inp").keyup(function() {
-		// 	if ($('.video-main-div').text().search(new RegExp(filter, "i")) < 0) {
-		// 		$('.search-no-result').slideUp('fast');  // MY CHANGE
-		// 	}
-		//
-		// });
 		</script>
 
-			<!-- <script>
-		// 	var a = document.getElementById("elemA");
-		// var b = document.getElementById("elemB");
-		//
-		// 	if(a)
-		// 	console.log("elemA exists");
-		// 	else
-		// 	console.log("elemA does not exist");
-		//
-		// 	if(b)
-		// console.log("elemB exists");
-		// else
-		// console.log("elemB does not exist");
-		</script> -->
+		<script>
+// 		var allHidden = true;
+//
+// $('video-main-div').each(function(){
+//  if($(this).is(':visible'))
+//  {
+//   allHidden = false;
+//   return false; //break out of each looping function as soon as first visible div is found
+//  }
+// });
+//
+// if(allHidden)
+//  $('.search-no-result').css('display','block');
+// else
+//  $('.search-no-result').css('display','none');
+		</script>
 
 		<!-- Full Search Filter Script End  -->
 
