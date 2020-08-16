@@ -346,6 +346,7 @@
  				padding: 2%;
  				overflow: hidden;
  				transition: box-shadow 0.4s ease;
+				display: none;
 			 }
 			 			 			/* responsive */
 		@media screen and (max-width: 1023px) {
