@@ -42,7 +42,8 @@
 			<div class="left-main-div">
 
 				<!-- search box Start -->
-				<div class="left-second-div">
+				<div class="left-second-div"
+				>
 
 					<p class="video-main-heading" style="margin:30px 7% 25px;">Search For Videos</p>
 					<input type="text" class="search-box-input" onkeyup="mysearchlistFunction()" id="src-inp" type="search" placeholder="Search For Video Titles ">
@@ -426,6 +427,7 @@
 			var filter = $('#uni-src-inp').val(),
 			count = 0;
 
+			$(".video-main-div").each(function() {
 				// If the list item does not contain the text phrase fade it out
 				if ($('.video-main-div').text().search(new RegExp(filter, "i")) < 0) {
 					$('.video-main-div').slideUp('fast');  // MY CHANGE
@@ -435,8 +437,7 @@
 					$('.video-main-div').slideDown('fast'); // MY CHANGE
 					count++;
 				}
-
-
+			});
 
 		});
 
@@ -447,22 +448,6 @@
 		//
 		// });
 		</script>
-
-			<!-- <script>
-		// 	var a = document.getElementById("elemA");
-		// var b = document.getElementById("elemB");
-		//
-		// 	if(a)
-		// 	console.log("elemA exists");
-		// 	else
-		// 	console.log("elemA does not exist");
-		//
-		// 	if(b)
-		// console.log("elemB exists");
-		// else
-		// console.log("elemB does not exist");
-		</script> -->
-
 		<!-- Full Search Filter Script End  -->
 
 		<!-- login box show hide start -->
@@ -487,13 +472,12 @@
 				var filter = $('#src-inp').val(),
 				count = 0;
 
+
 					// If the list item does not contain the text phrase fade it out
 					if ($('.src-list').text().search(new RegExp(filter, "i")) < 0) {
 						$('.src-list').slideUp('fast');  // MY CHANGE
 
 						// Show the list item if the phrase matches and increase the count by 1
-					}else if ($('.src-list').text().search(new RegExp(filter, "i")) == 0) {
-
 					}else{
 						$('.src-list').slideDown('fast'); // MY CHANGE
 						count++;
