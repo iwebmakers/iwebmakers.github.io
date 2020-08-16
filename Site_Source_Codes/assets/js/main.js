@@ -1,48 +1,30 @@
-$("#uni-btn").click(function fullSearch() {
-// $("#uni-src-inp").keyup(function() {
-  // Retrieve the input field text and reset the count to zero
-
-  var filter = $('#uni-src-inp').val(),
-  count = 0;
-
-
-  // Loop through the comment list
-  $('.video-main-div').each(function() {
-
-
-
-    // If the list item does not contain the text phrase fade it out
-    if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-      $(this).fadeOut();  // MY CHANGE
-
-
-      // Show the list item if the phrase matches and increase the count by 1
-    } else {
-      $(this).fadeIn(); // MY CHANGE
-      count++;
-
-
+  // main left div list Search Filter Script Start
+  function mysearchlistFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("src-inp");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("search-box-list");
+    li = ul.getElementsByClassName("src-list");
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByClassName("src-anc")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
     }
+  }
+  // main left div list Search Filter Script end
+
+  // login box show hide start
+  $(".navigation-bar-login-div-Toggle").click(function() {
+    $('#navigation-bar-login-div-function').fadeToggle();
   });
+  // login box show hide End
 
-
-
-
-});
-
-// $("#uni-btn").click(function fullSearch2() {
-//
-//   var allHidden = true;
-//   $('.video-main-div').each(function() {
-//   if($(this).is(':visible'))
-//   {
-//    allHidden = false;
-//
-//     return false;//break out of each looping function as soon as first visible div is found
-//   }
-// });
-// if(allHidden)
-//  $('.search-no-result').css('display','block');
-// else
-//  $('.search-no-result').css('display','none');
-// });
+// Search box show hide start
+  $(".unervisal-search-button-Toggle").click(function() {
+    $('#navigation-bar-search-div-function').fadeToggle();
+  });
+  // Search box show hide end
