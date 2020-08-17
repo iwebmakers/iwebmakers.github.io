@@ -2,13 +2,28 @@
 				margin: 0;
 				outline: none;
 			}
-
+			/* scroll bar editing start */
+			::-webkit-scrollbar {
+			  width: 16px;
+			}
+			::-webkit-scrollbar-track {
+			  background: #2e3e4e;
+				border-radius:10px;
+			}
+			::-webkit-scrollbar-thumb {
+			  background: #1b2936;
+				border-radius:50px;
+				border: 3px solid #2e3e4e;
+				transition: color .3s;
+			}
+			::-webkit-scrollbar-thumb:hover {
+			  background: #08f;
+			}
 			/*====== Nav Bar Styles start=======*/
-
 			.Top-navigation-bar {
 				overflow: hidden;
 				background-color: #1b2936;
-				box-shadow: 0px 1px 10px 3px rgba(0,0,0,0.12);
+				box-shadow: 0px 1px 10px 3px rgba(0,0,0,0.2);
 				position: fixed;
 				width: 100%;
 				height: auto;
@@ -74,33 +89,39 @@
 			}
 			/* search box hover effect end*/
 			.unervisal-search-button-Toggle{
-				background: #fff;
 				font-size:20px;
 				font-weight: 400;
 				float: right;
-				color: #B0B0B0;
 				transition: all .2s ease-in-out;
 				display: none;
 				border: none;
 				padding: 10px;
+				background: #2e3e4e;
+				border-radius: 50px;
+				color: #89919b;
+				width: 41px;
+				height: 41px;
 			}
 			.unervisal-search-button-Toggle:hover{
-				color: #000;
-			}
-			.navigation-bar-login-div-Toggle:hover{
-				color: #000;
+				color: #fff;
 			}
 			.navigation-bar-login-div-Toggle{
-				background: #fff;
 				font-size:20px;
 				font-weight: 400;
 				float: right;
-				color: #B0B0B0;
-				transition: all .2s ease-in-out;
+				transition: all .3s ease-in-out;
 				display: none;
 				border: none;
 				padding: 10px;
-				margin: 0 10px;
+				margin: 0 20px 0 10px;
+				background: #2e3e4e;
+				border-radius: 50px;
+				color: #89919b;
+				width: 41px;
+				height: 41px;
+			}
+			.navigation-bar-login-div-Toggle:hover{
+				color: #fff;
 			}
 			.unervisal-search-button-question{
 				background: none;
@@ -133,7 +154,7 @@
 				 font-weight: bold;
 			}
 			.navigation-bar-sign-in-button:hover{
-				color: #000;
+				color: #89919b;
 			}
 			.navigation-bar-sign-up-button{
 			 	 background: #08f ;
@@ -148,11 +169,9 @@
 				 font-weight: bold;
 			}
 			.navigation-bar-sign-up-button:hover{
-				color: #000;
-				background: #EEEEEE;
+				box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.4);
 			}
 			/*====== Nav Bar Styles end =======*/
-
 			.left-main-div{
 				 width: 25%;
 				 height: auto;
@@ -227,23 +246,22 @@
 			font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 			}
 		.video-main-button{
-				 background-color: white ;
-			   border:  1px solid #0085FA;
-			   color: #0085FA;
-			   padding: 7px 15px;
-			   font-size: 15px;
-			   transition: 0.3s;
-				 margin: 0px 20px 10px 0px;
-				 font-weight: bold;
-				 font-family: 'Nunito', sans-serif;
-				 border-radius: 50px;
-				 cursor: pointer;
+			background: rgba(0, 133, 250, 0.1);
+			border:  1px solid #0085FA;
+		 	color: #0085FA;
+			font-size: 16px;
+			transition: all .2s ease-in-out;
+			border-radius: 7px;
+			cursor: pointer;
+			font-weight: bold;
+			padding: 8px 15px;
+			margin: 0px 20px 10px 0px;
 			 }
 		.video-main-button:hover {
-			background: rgba(0, 133, 250, 0.05)
+			background: rgba(0, 133, 250, 0.2);
 			 }
 		.iweb-main-button{
-		 		background-color: white ;
+		 		background-color: #1b2936 ;
 		 	   border:  1px solid #0085FA;
 		 	   color: #0085FA;
 		 	   padding: 7px 15px;
@@ -289,6 +307,9 @@
 			 }
 			 .search-box-input::placeholder{
 				 color: #89919b;
+			 }
+			 .search-box-input:hover{
+				 background: #40576d;
 			 }
 			 #search-box-div {
 				 width: 90%;
@@ -370,7 +391,7 @@
 				.navigation-bar-search{
 					width: 40%;
 		}
-		@media screen and (max-width: 855px) {
+		@media screen and (max-width: 935px) {
 			.navigation-bar-login-div-Toggle{
 				display:block;
 			}
@@ -381,7 +402,7 @@
 				text-align: right;
 			}
 			.navigation-bar-search{
-				width: 90%;
+				width: 89%;
 			}
 			.unervisal-search-input{
 				width: 49%;
@@ -390,9 +411,18 @@
 				margin-right: 20px;
 			}
 		}
-		@media screen and (max-width: 776px) {
+		@media screen and (max-width: 780px) {
 			.unervisal-search-button-question{
 				display: none;
+			}
+			.navigation-bar-login-div{
+				text-align: center;
+			}
+			.navigation-bar-sign-up-button{
+				margin: 4px 0;
+			}
+			.video-main-button{
+				margin: 0px 10px 10px 0px;
 			}
 		}
 		@media screen and (max-width: 700px) {
@@ -430,24 +460,21 @@
 					 margin: 10px 0 0 0
 				 }
 				 .video-main-button{
-				 		 margin: 5px;
+				 		margin: 5px;
 				 }
 					.video-main-heading{
-				 	font-size: 15px;
+				 		font-size: 15px;
 				 	}
 				 	.video-sub-text{
 						font-size: 11px;
 				 	}
 					.video-main-button{
-						   padding: 7px 15px;
-						   font-size: 12px;
-							 margin: 0px 7px 12px ;
+						padding: 7px 15px;
+						font-size: 12px;
+					 	margin: 0px 7px 12px ;
 			 		}
 					.navigation-bar-search{
 						display: none;
-					}
-					.unervisal-search-button-Toggle{
-						display: block;
 					}
 					.navigation-bar-search{
 						width: 100%;
@@ -461,21 +488,39 @@
 						width: 13%;
 						margin-right: 10px;
 					}
-					.navigation-bar-login-div{
-						text-align: center;
+					.unervisal-search-button-Toggle{
+						display: block;
+						background: none;
 					}
-					.navigation-bar-sign-up-button{
-						margin: 4px 0;
+					.unervisal-search-button-Toggle:hover{
+						background: #2e3e4e;
 					}
-			 }
+					.navigation-bar-login-div-Toggle{
+						background: none;
+			 		}
+					.navigation-bar-login-div-Toggle:hover{
+						background: #2e3e4e;
+					}
+		 }
 			@media screen and (max-width: 480px) {
+				.navigation-bar-logo{
+					 margin: 11px 15px 0px 25px;
+				}
 				.unervisal-search-input{
 				width: 76.5%;
 				}
+				.navigation-bar-sign-up-button{
+					margin-right: 10px;
+				}
 			}
-			@media screen and (max-width: 355px) {
+			@media screen and (max-width: 383px) {
+				.video-main-button{
+				    margin: 0px 2px 12px;
+					}
+			}
+			@media screen and (max-width: 356px) {
 
 				body{
-					width: 355px;
+					width: 356px;
 				}
 			}

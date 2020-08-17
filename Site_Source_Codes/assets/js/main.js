@@ -28,3 +28,46 @@
     $('#navigation-bar-search-div-function').fadeToggle();
   });
   // Search box show hide end
+
+  // Full Search Filter Script Start
+      $("#uni-btn").click(function() {
+        var filter = $('#uni-src-inp').val(),
+        count = 0;
+        $('.video-main-div').each(function() {
+          if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+            $(this).fadeOut();
+          } else {
+            $(this).fadeIn('slow');
+            count++;
+          }
+        });
+      });
+
+      $('#uni-src-inp').keypress(function(event){
+  var keycode = (event.keyCode ? event.keyCode : event.which);
+  if(keycode == '13')
+  {
+    var filter = $('#uni-src-inp').val(),
+    count = 0;
+    $('.video-main-div').each(function() {
+      if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+        $(this).fadeOut();
+      } else {
+        $(this).fadeIn('slow');
+        count++;
+      }
+    });
+  }
+  });
+       // Full Search Filter Script End
+
+       // search box show hide start
+      function searchboxshowhidefunction() {
+      var x = document.getElementById("navigation-bar-search-div-function");
+      if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+        x.style.display = "none";
+      }
+    }
+   // search box show hide start
