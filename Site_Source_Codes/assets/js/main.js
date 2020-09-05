@@ -38,7 +38,7 @@
             $(this).fadeOut();
           } else {
             $(this).fadeIn('slow');
-            count++;
+            count++;s
           }
         });
       });
