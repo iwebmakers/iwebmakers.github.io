@@ -2,6 +2,9 @@
 				margin: 0;
 				outline: none;
 			}
+			body{
+				background: #121E2C;
+			}
 			/* scroll bar editing start */
 			::-webkit-scrollbar {
 			  width: 16px;
@@ -128,7 +131,7 @@
 				font-size:12px;
 				font-weight: 400;
 				float: left;
-				cursor: pointer;
+				cursor: help;
 				border-radius: 50px;
 				border: 2px solid #89919b;
 				color: #89919b;
@@ -161,7 +164,7 @@
 			   color: #fff;
 			   padding: 8px 15px;
 			   font-size: 16px;
-			   transition: all .2s ease-in-out;
+			   transition: all .6s;
 				 margin: 4px 35px 4px 5px;
 				 border-radius: 40px;
 				 cursor: pointer;
@@ -199,6 +202,64 @@
 				font-weight: 600;
 				line-height: 32px;
 				color: #E9EAEC;
+				float: left;
+			}
+			.clear-search-div{
+				/* display: none; */
+				margin-top:20px;
+				margin-right: 20px;
+				padding: 7px 20px;
+				font-size: 20px;
+				font-family: 'YT Sans', 'Roboto', 'Arial', sans-serif;
+				font-weight: bold;
+				float: right;
+				width: auto;
+				text-align: center;
+				height: auto;
+				cursor: pointer;
+				color: #8D949C;
+				border-radius: 7px;
+				background: #1b2936;
+				box-shadow: 0px 1px 15px 3px rgba(0,0,0,0.05);
+				transition: all .4s;
+			}
+			.clear-search-div:hover{
+				color: #fff;
+			}
+			.search-one-result{
+			 background: #1b2936;
+			 border-radius: 7px;
+			 border: 1px solid #1b2936;
+			 width: 90%;
+			 height: auto;
+			 margin: 1.5%;
+			 float: left;
+			 padding: 2% 3%;
+			 overflow: hidden;
+			 box-shadow: 0px 1px 15px 3px rgba(0,0,0,0.12);
+			 transition: all .4s;
+			}
+			.search-one-result-heading{
+			font-family: Trebuchet, Trebuchet MS, Tahoma, Arial, sans-serif;
+			font-size: 21px;
+			margin: 10px 0;
+			color: #E9EAEC;
+			font-weight: 300;
+			}
+			.search-one-result-sub-heading{
+			font-family: 'Nunito', sans-serif;
+			font-size: 17px;
+			margin-top: 20px;
+			margin-left: 25px;
+			color: #8d949c;
+			font-weight: 600;
+			}
+			.search-one-result-list{
+				color: #8d949c;
+				font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+				margin-top: 20px;
+				margin-left: 25px;
+				margin-bottom: 10px;
 			}
 			.video-main-div{
 				background: #1b2936;
@@ -350,33 +411,6 @@
 				 border-bottom-color: #0e1a28;
 				 border-bottom-width: 1px;
 			 }
-
-			 .search-no-result{
-			  background: blue;
-			  border-radius: 7px;
- 				border: 1px solid #E0E0E0;
-				display: none;
- 				width: 92%;
- 				height: 200px;
- 				margin: 1.5%;
- 				float: left;
- 				padding: 2%;
- 				overflow: hidden;
- 				transition: box-shadow 0.4s ease;
-			 }
-			 .search-one-result{
-				 background: white;
-				 border-radius: 7px;
- 				border: 1px solid #E0E0E0;
- 				width: 92%;
- 				height: 200px;
- 				margin: 1.5%;
- 				float: left;
- 				padding: 2%;
- 				overflow: hidden;
- 				transition: box-shadow 0.4s ease;
-				display: none;
-			 }
 			 			 			/* responsive */
 		@media screen and (max-width: 1023px) {
 				.left-main-div{
@@ -387,6 +421,10 @@
 				}
 				.main-title{
 					margin: 15px 0 15px 20px;
+				}
+				.clear-search-div{
+					margin-right: 15px;
+					margin-top: 15px;
 				}
 				.navigation-bar-search{
 					width: 40%;
@@ -437,8 +475,35 @@
 				 .main-title{
 					 text-align: center;
 					 margin: 10px;
-					 font-size: 20px;
+					 font-size: 24px;
+					 float: none;
 				 }
+				 .clear-search-div{
+					 margin-top:5px;
+	 				 margin-right: 4%;
+					 margin-bottom: 5px;
+	 			 	 padding: 7px 20px;
+					 text-align: center;
+				 }
+				 .search-one-result{
+					 width: 83%;
+					 margin: 3%;
+					 padding: 5%;
+					 box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.12);
+					 border:  0px solid #0085FA;
+				 }
+				 .search-one-result-heading{
+	 				font-size: 19px;
+					text-align: center;
+					margin-left: 0;
+	 				}
+	 				.search-one-result-sub-heading{
+	 				font-size: 16px;
+					margin-top: 30px;
+	 				}
+	 			.search-one-result-list{
+					font-size: 14px;
+	 				}
 				 .video-main-div{
 					 width: 83%;
 					 margin: 3%;
@@ -463,10 +528,10 @@
 				 		margin: 5px;
 				 }
 					.video-main-heading{
-				 		font-size: 15px;
+				 		font-size: 18px;
 				 	}
 				 	.video-sub-text{
-						font-size: 11px;
+						font-size: 13px;
 				 	}
 					.video-main-button{
 						padding: 7px 15px;
@@ -515,7 +580,7 @@
 			}
 			@media screen and (max-width: 383px) {
 				.video-main-button{
-				    margin: 0px 2px 12px;
+				    margin: 0px 1px 12px;
 					}
 			}
 			@media screen and (max-width: 356px) {

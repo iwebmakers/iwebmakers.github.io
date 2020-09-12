@@ -6,7 +6,7 @@
 
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="theme-color" content="#1b2936">
+		<meta name="theme-color" content="#08f">
 		<link rel="stylesheet" href="assets/css/main.css">
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,7 +16,7 @@
 
 	</head>
 
-	<body bgcolor="#121E2C">
+	<body>
 		<!-- Nav Bar ==========-->
 		<header class="Top-navigation-bar">
 			<div class="navigation-bar-logo">
@@ -43,8 +43,7 @@
 			<div class="left-main-div">
 
 				<!-- search box Start -->
-				<div class="left-second-div"
-				>
+				<div class="left-second-div">
 
 					<p class="video-main-heading" style="margin:30px 7% 25px;">Search For Videos</p>
 					<input type="text" class="search-box-input" onkeyup="mysearchlistFunction()" id="src-inp" type="search" placeholder="Search For Video Titles ">
@@ -122,6 +121,8 @@
 
 				<h1 class="main-title">Videos and source codes</h1>
 
+				<div class="clear-search-div">Clear Search</div>
+
 				<!-- Display Current Time and Date in C# -->
 				<div class="video-main-div">
 					<table>
@@ -135,7 +136,7 @@
 								<p class="video-main-heading"> How to Display Current (Running) Time and Date  in C# </p>
 								<p class="video-sub-text"> How to Display Current (Running) Date and Time in C# or material design application in c# window form. Need some ideas or knowledge to Display Current Date and Time in C#. This tutorial is for you</p>
 								<button class="video-main-button"> Watch on YouTube</button>
-								<button class="video-main-button"> Resources and Info</button>
+								<a  href="Display-Current-Time-and-Date.html"><button class="video-main-button"> Resources and Info</button></a>
 							</td>
 						</tr>
 					</table>
@@ -388,12 +389,14 @@
 					</table>
 				</div>
 
-				<div class="search-no-result">
-
-				</div>
-
 				<div class="search-one-result">
-
+					<p class="search-one-result-heading">Thats what we Found on your Search " " </p>
+					<p class="search-one-result-sub-heading">Didn't Found what your Searching for?</p>
+						<ul class="search-one-result-list">
+							<li>Check for spellings</li>
+							<li>Check for Unwanted Spaces</li>
+							<li>Try searching on unique words</li>
+						</ul>
 				</div>
 
 			</div>
