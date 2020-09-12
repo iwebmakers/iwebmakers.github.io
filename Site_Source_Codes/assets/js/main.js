@@ -38,9 +38,15 @@
             $(this).fadeOut();
           } else {
             $(this).fadeIn('slow');
-            count++;s
+            count++;
           }
         });
+        if($(window).width() <= 600){
+          $('.navigation-bar-search').fadeToggle();
+        }
+
+        $('.clear-search-div').fadeIn();
+        $('.search-one-result').fadeIn();
       });
 
       $('#uni-src-inp').keypress(function(event){
@@ -57,6 +63,8 @@
         count++;
       }
     });
+    $('.clear-search-div').fadeIn();
+    $('.search-one-result').fadeIn();
   }
   });
        // Full Search Filter Script End
@@ -71,3 +79,50 @@
       }
     }
    // search box show hide start
+
+   //clear search
+   var blanktxt = $.trim( $('.unervisal-search-input').val() )
+   $('.clear-search-div').click(function(){
+     $('.unervisal-search-input').val(blanktxt);
+     $('.clear-search-div').fadeOut();
+     $('.search-one-result').fadeOut();
+     $('.video-main-div').fadeIn();
+
+   });
+
+   //Button pointer click
+   $(function(){
+
+     //creating a style object for the ripple effect
+     function RippleStyle(width, height, posX, posY){
+       this.width = ( width <= height ) ? height : width;
+       this.height = ( width <= height ) ? height : width;
+       this.top = posY - (this.height * 0.5);
+       this.left = posX - (this.width * 0.5);
+     }
+
+     $('.video-main-button').on('mousedown', function(e){
+       //appending an element with a class name "btn-ripple"
+       var rippleEl = $('<span class="btn-ripple"></span>').appendTo(this);
+
+       //getting the button's offset position
+       var pos = $(this).offset();
+
+       //get the button's width and height
+       var width = $(this).outerWidth();
+       var height = $(this).outerHeight();
+
+       //get the cursor's x and y position within the button
+       var posX = e.pageX - pos.left;
+       var posY = e.pageY - pos.top;
+
+       //adding a css style to the ripple effect
+       var rippleStyle = new RippleStyle(width, height, posX, posY);
+       rippleEl.css(rippleStyle);
+     });
+
+     //this event listener will be triggered once the ripple animation is done
+     $('.video-main-button').on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', '.video-main-button-ripple', function(){
+       $(this).remove();
+     });
+   });

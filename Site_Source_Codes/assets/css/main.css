@@ -222,6 +222,7 @@
 				background: #1b2936;
 				box-shadow: 0px 1px 15px 3px rgba(0,0,0,0.05);
 				transition: all .4s;
+				display: none;
 			}
 			.clear-search-div:hover{
 				color: #fff;
@@ -238,6 +239,7 @@
 			 overflow: hidden;
 			 box-shadow: 0px 1px 15px 3px rgba(0,0,0,0.12);
 			 transition: all .4s;
+			 display: none;
 			}
 			.search-one-result-heading{
 			font-family: Trebuchet, Trebuchet MS, Tahoma, Arial, sans-serif;
@@ -307,19 +309,35 @@
 			font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 			}
 		.video-main-button{
-			background: rgba(0, 133, 250, 0.1);
+			background: linear-gradient(to right, #08f , rgba(0, 133, 250,0.6));
 			border:  1px solid #0085FA;
-		 	color: #0085FA;
+		 	color: #fff;
 			font-size: 16px;
-			transition: all .2s ease-in-out;
-			border-radius: 7px;
+			transition: all .4s;
+			border-radius: 40px;
 			cursor: pointer;
 			font-weight: bold;
 			padding: 8px 15px;
 			margin: 0px 20px 10px 0px;
+			overflow: hidden;
+			transform: translate(0%, 0%);
 			 }
 		.video-main-button:hover {
-			background: rgba(0, 133, 250, 0.2);
+			box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
+			 }
+			.video-main-button .btn-ripple{
+			   background: rgba(255, 255, 255, 0.3);
+			   position: absolute;
+			   border-radius: 100%;
+			   animation: ripple 1s;
+			   transform: scale(0);
+			 }
+
+			 @keyframes ripple {
+			   100%{
+			     transform: scale(2);
+			     opacity: 0;
+			   }
 			 }
 		.iweb-main-button{
 		 		background-color: #1b2936 ;
@@ -526,6 +544,26 @@
 				 }
 				 .video-main-button{
 				 		margin: 5px;
+				 }
+
+				 span{
+					 position: absolute;
+					 background: #fff;
+					 transform: translate(-50%, -50%);
+					 pointer-events: none;
+					 border-radius: 50%;
+					 animation: animate 1s linear infinite;
+				 }
+				 @keyframes animate{
+					 0%{
+						 width:0px;
+						 height: 0px;
+					 }
+					 100%{
+						 width:50px;
+						 height: 50px;
+					 }
+
 				 }
 					.video-main-heading{
 				 		font-size: 18px;
