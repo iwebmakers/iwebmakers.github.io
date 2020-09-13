@@ -313,7 +313,7 @@
 			}
 		.video-main-button{
 			background: linear-gradient(to right, #08f , rgba(0, 133, 250,0.6));
-			border:  1px solid #0085FA;
+			border: none;
 		 	color: #fff;
 			font-size: 16px;
 			transition: all .4s;
@@ -435,6 +435,7 @@
 				 border-bottom-color: #0e1a28;
 				 border-bottom-width: 1px;
 			 }
+
 			 			 			/* responsive */
 		@media screen and (max-width: 1023px) {
 				.left-main-div{

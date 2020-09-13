@@ -17,6 +17,12 @@
   }
   // main left div list Search Filter Script end
 
+  //Tooltip Script Start
+  $(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+  //tooltip script end
+
   // login box show hide start
   $(".navigation-bar-login-div-Toggle").click(function() {
     $('#navigation-bar-login-div-function').slideToggle();
