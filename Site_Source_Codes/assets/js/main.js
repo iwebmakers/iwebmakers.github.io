@@ -112,7 +112,7 @@
        this.left = posX - (this.width * 0.5);
      }
 
-     $('.video-main-button').on('mousedown', function(e){
+     $('.button-animation').on('mousedown', function(e){
        //appending an element with a class name "btn-ripple"
        var rippleEl = $('<span class="btn-ripple"></span>').appendTo(this);
 
@@ -133,7 +133,7 @@
      });
 
      //this event listener will be triggered once the ripple animation is done
-     $('.video-main-button').on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', '.video-main-button-ripple', function(){
+     $('.button-animation').on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', '.button-animation-ripple', function(){
        $(this).remove();
      });
    });
