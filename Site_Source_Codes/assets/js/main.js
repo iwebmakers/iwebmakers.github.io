@@ -1,36 +1,28 @@
 
 //Content Link Variables
-var appendCode = '';
+var appendCode;
 var valPass;
+
 function getVars() {
+  // if (valPass == "display_current_date_time") {
+  //   appendCode = '<iframe src="Display-Current-Time-and-Date.html" class="content-frame" frameborder="0"></iframe>';
+  //   alert("Value: " + appendCode+"\n"+valPass);
+  // } else if (valPass == 'demo') {
+  //   appendCode = '<iframe src="demo.html" class="content-frame" frameborder=""></iframe>';
+  // }else{
+  // }
   switch (valPass) {
     case 'display_current_date_time':
-      appendCode = '<iframe src="Display-Current-Time-and-Date.html" class="content-frame" frameborder=""></iframe>';
+      appendCode = '<iframe src="Display-Current-Time-and-Date.html" class="content-frame" frameborder="0"></iframe>';
       break;
     case 'demo':
-      appendCode = '<iframe src="demo.html" class="content-frame" frameborder=""></iframe>';
+      appendCode = '<iframe src="demo.html" class="content-frame" frameborder="0"></iframe>';
       break;
     default:
       appendCode = 'Could not get data';
       break;
   }
 }
-
-function iframeView(link) {
-  $('.right-main-div').append(link);
-}
-
-function delCurrentView() {
-  $('.temp_div').remove();
-  event.preventDefault();
-}
-
-$('.icontent').click(function () {
-  valPass = $(this).val();
-  delCurrentView();
-  getVars();
-  alert("Value: " + appendCode);
-});
 
 //End
 
@@ -315,5 +307,29 @@ $(function () {
   //this event listener will be triggered once the ripple animation is done
   $('.button-animation').on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', '.button-animation-ripple', function () {
     $(this).remove();
+  });
+});
+
+function iframeView(link) {
+  $('.right-main-div').append(link);
+}
+
+function delCurrentView() {
+  $('.temp_div').remove();
+  event.preventDefault();
+}
+
+function replyClick(clickedId) {
+  valPass = clickedId;
+  //alert(clickedId)
+};
+
+$(document).ready(function () {
+  $('.video-main-div .frm-content').click(function () {
+    replyClick(this.id);
+    alert("Value: " + valPass);
+    getVars();
+    delCurrentView();
+    iframeView(appendCode);
   });
 });
