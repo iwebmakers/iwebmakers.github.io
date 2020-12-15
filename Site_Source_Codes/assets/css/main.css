@@ -399,7 +399,6 @@
 			 #search-box-div {
 				 width: 90%;
 				 padding: 5px 0;
-				 text-align: ;
 				 background-color: none;
 				 margin:0 5%;
 				 display:block;
@@ -420,7 +419,7 @@
 				 transition: .4s color;
 			 }
 			 #search-box-list li a:hover:not(.header) {
-				 background-color: #eee
+				 background-color: #eee;
 				 width:100%;
 			 }
 			 #search-box-list li a:hover{
@@ -634,3 +633,4 @@
 					width: 356px;
 				}
 			}
+		}
