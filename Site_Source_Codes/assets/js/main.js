@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 //Content Link Variables
 
@@ -147,6 +148,42 @@ $(function () {
   });
 });
 
+
+function iframeView(link) {
+  $('.right-main-div').append(link);
+}
+
+function delCurrentView() {
+  $('.temp_div').remove();
+  event.preventDefault();
+}
+
+$('.video-main-button').click(function () {
+  delCurrentView();
+  //iframeView($(this).val());
+  alert($(this).val().con);
+});
+
+=======
+  // main left div list Search Filter Script Start
+  function mysearchlistFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("src-inp");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("search-box-list");
+    li = ul.getElementsByClassName("src-list");
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByClassName("src-anc")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+  // main left div list Search Filter Script end
+
   //Tooltip Script Start
   $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
@@ -273,19 +310,4 @@ $(function () {
        $(this).remove();
      });
    });
-
-
-   function iframeView(link) {
-    $('.right-main-div').append(link);
-  }
-  
-  function delCurrentView() {
-    $('.temp_div').remove();
-    event.preventDefault();
-  }
-  
-  $('.video-main-button').click(function () {
-    delCurrentView();
-    //iframeView($(this).val());
-    alert($(this).val().con);
-  });
+>>>>>>> 58e1c2fb9b5983d8f49e21e23535010e4be3db4c
