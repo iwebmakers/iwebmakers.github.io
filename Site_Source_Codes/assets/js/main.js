@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 //Content Link Variables
 
@@ -164,7 +163,6 @@ $('.video-main-button').click(function () {
   alert($(this).val().con);
 });
 
-=======
   // main left div list Search Filter Script Start
   function mysearchlistFunction() {
     var input, filter, ul, li, a, i, txtValue;
@@ -310,4 +308,3 @@ $('.video-main-button').click(function () {
        $(this).remove();
      });
    });
->>>>>>> 58e1c2fb9b5983d8f49e21e23535010e4be3db4c
