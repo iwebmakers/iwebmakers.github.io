@@ -360,7 +360,7 @@
 			}
 
 			.video-main-button {
-				background: linear-gradient(to right, #08f, rgba(0, 133, 250, 0.6));
+				background-color:  #08f;
 				border: none;
 				color: #fff;
 				font-size: 16px;
@@ -395,42 +395,6 @@
 					opacity: 0;
 				}
 			}
-
-			.iweb-main-button {
-				background-color: #1b2936;
-				border: 1px solid #0085FA;
-				color: #0085FA;
-				padding: 7px 15px;
-				font-size: 15px;
-				transition: 0.3s;
-				font-weight: bold;
-				font-family: 'Nunito', sans-serif;
-				border-radius: 4px;
-				cursor: pointer;
-			}
-
-			.iweb-main-button:hover {
-				background: rgba(0, 133, 250, 0.1);
-			}
-
-			.iweb-second-button {
-				background-color: #0085FA;
-				border: 1px solid #0085FA;
-				color: white;
-				padding: 7px 15px;
-				font-size: 15px;
-				transition: 0.3s;
-				font-weight: bold;
-				font-family: 'Nunito', sans-serif;
-				border-radius: 4px;
-				cursor: pointer;
-			}
-
-			.iweb-second-button:hover {
-				background: rgba(85, 158, 255, 0.8);
-				border: 1px solid rgba(85, 158, 255, 0.8);
-			}
-
 			.search-box-input {
 				width: 84%;
 				height: 40px;
@@ -478,11 +442,6 @@
 				transition: .4s color;
 			}
 
-			#search-box-list li a:hover:not(.header) {
-				background-color: #eee;
-				width: 100%;
-			}
-
 			#search-box-list li a:hover {
 				color: #0085FA;
 			}
@@ -502,8 +461,6 @@
 				height: 2000px;
 				border: none;
 			}
-
-
 
 			/* responsive */
 
