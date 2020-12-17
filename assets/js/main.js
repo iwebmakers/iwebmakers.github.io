@@ -4,25 +4,73 @@ var appendCode;
 var valPass;
 
 function getVars() {
-  // if (valPass == "display_current_date_time") {
-  //   appendCode = '<iframe src="Display-Current-Time-and-Date.html" class="content-frame" frameborder="0"></iframe>';
-  //   alert("Value: " + appendCode+"\n"+valPass);
-  // } else if (valPass == 'demo') {
-  //   appendCode = '<iframe src="demo.html" class="content-frame" frameborder=""></iframe>';
-  // }else{
-  // }
   switch (valPass) {
     case 'display_current_date_time':
       appendCode = '<iframe src="Display-Current-Time-and-Date.html" class="content-frame" frameborder="0"></iframe>';
       break;
-    case 'demo':
+    case 'create-modern-dashboard-part-1':
       appendCode = '<iframe src="demo.html" class="content-frame" frameborder="0"></iframe>';
       break;
+    case 'create-modern-dashboard-part-2':
+      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
+      break;
+    case 'modern-design-splashscreen-in-c#':
+      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
+      break;
+    case 'send-emails-in-c#-1':
+      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
+      break;
+    case 'make-a-logo-free-5-mins':
+      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
+      break;
+    case 'how-to-get-free-website-themes':
+      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
+      break;
+    case 'how-to-make-money-$100':
+      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
+      break;
+    case 'recover-permanently-deleted-files-free-2020':
+      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
+      break;
+    case 'how-to-hack-wifi-get-password':
+      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
+      break;
+    case 'how-to-create-splashscreen-c#-2020':
+      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
+      break;
+    case 'create-login-form-in-c#-2020':
+      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
+      break;
+    case 'how-to-create-crystal-report-c#-2020':
+      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
+      break;
+    case 'iwebmakers-intro-launch-2019':
+      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
+      break;
+    // case 'code':
+    //   appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
+    //   break;
     default:
       appendCode = 'Could not get data';
       break;
   }
 }
+function scrltop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+$(document).ready(function () {
+  $('.video-main-div .frm-content').click(function () {
+    valPass = this.id //pass buton id
+    alert("Value: " + valPass); 
+    getVars(); //checking id and assigning the specific iframe site for content
+    $('.temp_div').remove(); //delete the temp div element
+    event.preventDefault(); //do not remove this to avoid errors
+    $('.right-main-div').append(appendCode); //add the assigned iframe content
+    scrltop(); // scroll to top for better view.
+  });
+});
 
 //End
 
@@ -307,29 +355,5 @@ $(function () {
   //this event listener will be triggered once the ripple animation is done
   $('.button-animation').on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', '.button-animation-ripple', function () {
     $(this).remove();
-  });
-});
-
-function iframeView(link) {
-  $('.right-main-div').append(link);
-}
-
-function delCurrentView() {
-  $('.temp_div').remove();
-  event.preventDefault();
-}
-
-function replyClick(clickedId) {
-  valPass = clickedId;
-  //alert(clickedId)
-};
-
-$(document).ready(function () {
-  $('.video-main-div .frm-content').click(function () {
-    replyClick(this.id);
-    alert("Value: " + valPass);
-    getVars();
-    delCurrentView();
-    iframeView(appendCode);
   });
 });
