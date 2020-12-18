@@ -72,6 +72,21 @@ $(document).ready(function () {
   });
 });
 
+var btn = $('#btn-scrl-top');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 550) {
+    btn.addClass('show-scrl-btn');
+  } else {
+    btn.removeClass('show-scrl-btn');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
 //End
 
 // main left div list Search Filter Script Start

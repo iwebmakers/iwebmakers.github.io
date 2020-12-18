@@ -360,7 +360,7 @@
 			}
 
 			.video-main-button {
-				background-color:  #08f;
+				background-color: #08f;
 				border: none;
 				color: #fff;
 				font-size: 16px;
@@ -395,6 +395,7 @@
 					opacity: 0;
 				}
 			}
+
 			.search-box-input {
 				width: 84%;
 				height: 40px;
@@ -456,10 +457,51 @@
 				border-bottom-width: 1px;
 			}
 
-			.content-frame{
+			.content-frame {
 				width: 100%;
 				height: 2000px;
 				border: none;
+			}
+
+			#btn-scrl-top {
+				display: inline-block;
+				background-color: #40576d;
+				width: 50px;
+				height: 50px;
+				text-align: center;
+				border-radius: 50%;
+				position: fixed;
+				bottom: 30px;
+				right: 30px;
+				transition: background-color .3s, opacity .5s, visibility .5s, box-shadow .4s;
+				opacity: 0;
+				visibility: hidden;
+				z-index: 1000;
+			}
+
+			#btn-scrl-top::after {
+				content: "\f077";
+				font-family: FontAwesome;
+				font-weight: normal;
+				font-style: normal;
+				font-size: 20px;
+				line-height: 45px;
+				color: #fff;
+			}
+
+			#btn-scrl-top:hover {
+				cursor: pointer;
+				background-color: #40576d;
+				box-shadow: 0px 0px 25px -8px rgba(0, 0, 0,1);
+			}
+
+			#btn-scrl-top:active {
+				background-color: #2e3e4e;
+			}
+
+			#btn-scrl-top.show-scrl-btn {
+				opacity: 1 !important;
+				visibility: visible;
 			}
 
 			/* responsive */
