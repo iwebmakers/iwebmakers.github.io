@@ -14,12 +14,14 @@
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
 	<script src="assets/jquery/jquery-3.5.1.min.js"></script>
 	<script src="assets/jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-	<!--  -->
+	<!-- start main div-->
 	<div class="main-div">
 		<h2 class="main-title"> How to Display Current (Running) Time and Date in C#</h2>
 		<ul class="breadcrumb">
@@ -37,20 +39,45 @@
 			<p class="video-div-text">Download the Source File containing the project Folder</p>
 			<button class="video-main-button button-animation button-animation"> Download </button>
 			<p class="video-div-text">Viwe and Copy Sourec Code used in this Project </p>
-			<button class="video-main-button button-animation button-animation"> View Code </button>
+			<a href=""><button class="video-main-button button-animation button-animation"> View Code </button></a>
 		</div>
-		<br>
-		<div class="video-containt-div">
-			<p class="video-div-text"> How to Display Current (Running) Date and Time in C# or material design application in c# window form. Need some ideas or knowledge to Display Current Date and Time in C#. This tutorial is for you </p>
-			<h2 class="main-title"> Code </h2>
 		
-			<code></code>
-
+		<br>
+		<!-- start video decriotion -->
+		<div class="video-containt-div">
+			<p class="video-div-text"> How to Display Current (Running) Date and Time in C# or material design
+				application in c# window form. Need some ideas or knowledge to Display Current Date and Time in C#. This
+				tutorial is for you </p>
+		</div>
+		<!-- start code  Explaination-->
+		<h2 class="main-title"> Code Explaination</h2>
+		<div class="video-code-div">
+			<h2 class="main-title"> Step 1) Start Timer</h2>
+			<div class="video-code-div-inside">
+				<p> private void Form1_Load(object sender, EventArgs e) </p>
+				<p> { </p>
+				<p> &emsp; &emsp; timer1.Start(); </p>
+				<p> } </p>
+			</div>
+			<p class="video-div-text" style="margin:3%;"> Starting the timer at the form load to update the time and date
+				each secound in the program </p>
 		</div>
 
+		<div class="video-code-div">
+			<h2 class="main-title"> Step 2) Print Date and Time in Label </h2>
+			<div class="video-code-div-inside">
+				<p>private void timer1_Tick(object sender, EventArgs e)</p> 
+				<p>{</p>
+				<p> &emsp; &emsp; label1.Text = DateTime.Now.ToLongTimeString();</p>	
+				<p> &emsp; &emsp; label2.Text = DateTime.Now.ToLongDateString();</p>	
+				<p> } </p>
+			</div>
+			<p class="video-div-text" style="margin:3%;"> Starting th timer at the form load to update the time and date
+				each secound in the program </p>
+		</div>
 	</div>
 
-s
+
 	<!-- External script -->
 	<script src="assets\js\main.js" charset=""></script>
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->

@@ -106,9 +106,9 @@ ul.breadcrumb li a:hover {
         }
     .video-div-text{
 		font-family: 'Nunito', sans-serif;
-		font-size: 15px;
+		font-size: 16px;
         font-weight: bold;
-        color: #e9eaec;
+        color: #8d949c;
     }
     .video-main-button {
         background-color:  #08f;
@@ -148,11 +148,34 @@ ul.breadcrumb li a:hover {
         }
     }
     .video-containt-div{
-		width: 94%;
+		width: 93%;
 		height: auto;
 		margin: 1.5%;
         padding: 2%;    
         overflow: hidden;    
+    }
+    .video-code-div{
+		width: 94%;
+		height: auto;
+		margin: 3%;
+        padding: 2% 0;    
+        overflow: hidden;    
+        background-color: rgba(21, 29, 36, 0.5);
+        border-radius: 7px;
+
+    }
+    .video-code-div-inside{
+        width: 89%;
+		height: auto;
+		margin: 2%;
+        padding: 3%;    
+        overflow: hidden;    
+        background-color: rgba(21, 29, 36, 0.3);
+        font-size: 18px;
+        color: #8d949c;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+        border: 2px solid #1B2936;
     }
         /* responsive   */
 
