@@ -368,7 +368,7 @@
 				border-radius: 40px;
 				cursor: pointer;
 				font-weight: bold;
-				padding: 8px 15px;
+				padding: 10px 20px;
 				margin: 0px 20px 10px 0px;
 			}
 
@@ -618,9 +618,6 @@
 						width: 100%;
 						margin: 10px 0 0 0
 					}
-					.video-main-button {
-						margin: 5px;
-					}
 					span {
 						position: absolute;
 						background: #fff;
@@ -640,14 +637,17 @@
 						}
 					}
 					.video-main-heading {
-						font-size: 18px;
+						font-size: 19px;
+						font-weight: bold;
+						line-height: 1.5;
+
 					}
 					.video-sub-text {
-						font-size: 13px;
+						font-size: 16px;
+						line-height: 1.5;
+
 					}
 					.video-main-button {
-						padding: 7px 15px;
-						font-size: 12px;
 						margin: 0px 7px 12px;
 					}
 					.navigation-bar-search {
@@ -688,11 +688,6 @@
 					}
 					.navigation-bar-sign-up-button {
 						margin-right: 10px;
-					}
-				}
-				@media screen and (max-width: 383px) {
-					.video-main-button {
-						margin: 0px 1px 12px;
 					}
 				}
 				@media screen and (max-width: 356px) {
