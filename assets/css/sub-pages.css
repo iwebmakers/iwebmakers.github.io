@@ -169,7 +169,7 @@ ul.breadcrumb li a:hover {
 		height: auto;
 		margin: 2%;
         padding: 3%;    
-        overflow: hidden;    
+        overflow: hidden;
         background-color: rgba(21, 29, 36, 0.3);
         font-size: 18px;
         color: #8d949c;
@@ -223,8 +223,19 @@ ul.breadcrumb li a:hover {
         text-align: justify;
     }
 }
-
-
     @media screen and (max-width: 600px) {
-        
+        .video-code-div-inside{
+            margin-bottom: 7%;
+        }   
+    }
+    @media screen and (max-width: 400px) {
+        .video-code-div-inside{
+            overflow-y: hidden;    
+            overflow-x: scroll;
+        } 
+    }
+    @media screen and (max-width: 356px) {
+        body {
+            width: 356px;
+        }
     }
