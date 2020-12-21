@@ -63,7 +63,6 @@ function scrltop() {
 $(document).ready(function () {
   $('.video-main-div .frm-content').click(function () {
     valPass = this.id //pass buton id
-    alert("Value: " + valPass); 
     getVars(); //checking id and assigning the specific iframe site for content
     $('.temp_div').remove(); //delete the temp div element
     event.preventDefault(); //do not remove this to avoid errors
@@ -74,17 +73,31 @@ $(document).ready(function () {
 
 var btn = $('#btn-scrl-top');
 
-$(window).scroll(function() {
+function getFixHeight() {
+  if (condition) {
+    
+  }
+}
+
+$(window).scroll(function () {
   if ($(window).scrollTop() > 550) {
     btn.addClass('show-scrl-btn');
   } else {
     btn.removeClass('show-scrl-btn');
   }
+  var ldiv_height = $(".left-main-div")[0].clientHeight;
+
+  if ($(window).scrollTop() > ldiv_height-$(window).height()+64) {
+    $('.left-main-div').addClass('toggle-fixed-left-div');
+    //alert(ldiv_height);
+  } else {
+    $('.left-main-div').removeClass('toggle-fixed-left-div');
+  }
 });
 
-btn.on('click', function(e) {
+btn.on('click', function (e) {
   e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
+  $('html, body').animate({ scrollTop: 0 }, '300');
 });
 
 //End
