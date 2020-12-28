@@ -28,6 +28,14 @@
 			::-webkit-scrollbar-thumb:hover {
 				background: #08f;
 			}
+			.center {
+				margin: 0;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-ms-transform: translate(-50%, -60%);
+				transform: translate(-50%, -60%);
+			  }
 
 			/*====== Nav Bar Styles start=======*/
 

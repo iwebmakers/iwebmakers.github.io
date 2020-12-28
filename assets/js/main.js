@@ -6,7 +6,7 @@ var valPass;
 function getVars() {
   switch (valPass) {
     case 'display_current_date_time':
-      appendCode = '<iframe src="Display-Current-Time-and-Date.html" class="content-frame" frameborder="0"></iframe>';
+      appendCode = '<iframe src="../user-content/Display-Current-Time-and-Date.php" class="content-frame" frameborder="0"></iframe>';
       break;
     case 'create-modern-dashboard-part-1':
       appendCode = '<iframe src="demo.html" class="content-frame" frameborder="0"></iframe>';
@@ -73,12 +73,6 @@ $(document).ready(function () {
 
 var btn = $('#btn-scrl-top');
 
-function getFixHeight() {
-  if (condition) {
-    
-  }
-}
-
 $(window).scroll(function () {
   if ($(window).scrollTop() > 550) {
     btn.addClass('show-scrl-btn');
@@ -86,12 +80,16 @@ $(window).scroll(function () {
     btn.removeClass('show-scrl-btn');
   }
   var ldiv_height = $(".left-main-div")[0].clientHeight;
+  var rdiv_height = $(".right-main-div")[0].clientHeight;
 
-  if ($(window).scrollTop() > ldiv_height-$(window).height()+64) {
-    $('.left-main-div').addClass('toggle-fixed-left-div');
-    //alert(ldiv_height);
-  } else {
-    $('.left-main-div').removeClass('toggle-fixed-left-div');
+
+  if (rdiv_height+100 > ldiv_height) {
+    if ($(window).scrollTop() > ldiv_height-$(window).height()+64) {
+      $('.left-main-div').addClass('toggle-fixed-left-div');
+      //alert(ldiv_height);
+    } else {
+      $('.left-main-div').removeClass('toggle-fixed-left-div');
+    }
   }
 });
 
