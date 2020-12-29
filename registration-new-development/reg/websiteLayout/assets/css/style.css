@@ -1,0 +1,453 @@
+/* ======
+   Styles
+====== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ======
+   CSS Variables
+====== */
+
+:root {
+
+   --colorWhite: #fff;
+   --colorBlack: #000;
+   --colorMain: #F36;
+   --colorBlackLight: #2e2e2e;
+   --colorSilver: #D4D9E2;
+   --redColor: #e3342f;
+   --greenColor: #28a745;
+
+}
+
+
+html {
+    font-size: 10px;
+}
+
+body {
+   
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+}
+
+nav#nav {
+    width: 100%;
+    height: 8rem;
+    line-height: 8rem;
+    background: var(--colorWhite);
+    display: flex;
+    padding: 0 4rem;
+    box-shadow: 0 0 5rem .5rem rgba(0,0,0, .05);
+}
+
+.left-ul li {
+    list-style: none;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.right-ul {
+    display: flex;
+}
+
+.right-ul li {
+    list-style: none;
+}
+
+.right-ul li a {
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.empty {
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    color: var(--colorWhite);
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 0;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 3rem;
+    outline: none;
+    padding: 2rem 3.2rem;
+    letter-spacing: 1px;
+}
+
+.btn-sweet {
+    background: var(--colorMain);
+}
+
+.btn-outline {
+    border-color: var(--colorMain);
+    color: var(--colorMain);
+}
+
+#form {
+    margin: 7rem 5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-section {
+    width: 50rem;
+}
+
+.form--header {
+    margin-bottom: 4rem;
+}
+
+.form--header h2 {
+    font-size: 3.5rem;
+}
+
+.form--header p {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+.group {
+    margin-bottom: 1.5rem;
+}
+
+.form--label {
+    display: block;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #434C5E;
+    margin-bottom: .8rem;
+    letter-spacing: 1px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.forgotPassword {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.forgotPassword a {
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: #434C5E;
+}
+
+
+.control {
+    width: 100%;
+    display: block;
+    padding: 1.5rem;
+    border-radius: 3px;
+    border: 1px solid var(--colorSilver);
+    font-size: 1.4rem;
+    color: #596377;
+    outline: none;
+}
+
+/* ======
+
+  Dashboard Styles
+
+====== */
+
+.container {
+    margin: 0 4rem;
+}
+
+.dashboard {
+    margin: 7rem 0;
+    display: flex;
+    width: 100%;
+}
+
+.card {
+    width: 22%;
+    background: var(--colorWhite);
+    box-shadow: 0 1rem 4rem .5rem rgba(0,0,0,.05);
+    padding: 4rem;
+    text-align: center;
+    border-radius: .4rem;
+}
+
+.card--image {
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+}
+
+.card--image img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border-top: 4px solid var(--colorMain);
+    border-right: 4px solid var(--colorMain);
+    border-bottom: 4px solid var(--colorMain);
+    border-left: 4px solid silver;
+    padding: .4rem;
+}
+
+.card--name {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    color: #2e2e2e;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.card--job {
+    color: #777;
+    font-size: 1.4rem;
+}
+
+.card--skills {
+    margin: 1rem 0;
+}
+
+.skill {
+    display: inline-block;
+    padding: 1rem;
+    border: 1px solid silver;
+    border-radius: 3rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-left: .6rem;
+    margin-top: .8rem;
+}
+
+.skill:last-child {
+    background:var(--colorMain);
+    border: none;
+    color: var(--colorWhite);
+    box-shadow: 0 1rem 4rem .5rem rgba(0,0,0,.05);
+}
+
+.card--intro {
+    font-size: 1.3rem;
+    color:silver;
+    margin:1.5rem 0 1.5rem 0;
+}
+
+.content {
+    width: 78%;
+}
+
+.content-section {
+    background: var(--colorWhite);
+    margin-left: 3rem;
+    padding: 3rem;
+    border-radius: .4rem;
+    box-shadow: 0 1rem 4rem .5rem rgba(0,0,0,.05);
+    font-size: 1.3rem;
+
+}
+
+.dashboard-heading {
+    font-size: 1.8rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    border-bottom: .1rem solid var(--colorMain);
+    padding-bottom: 1rem;
+}
+
+.btn-white {
+    display: inline-block;
+    padding: 1rem 1.3rem;
+    background: var(--colorWhite);
+    border-radius: 0;
+    color: var(--colorBlackLight);
+    text-decoration: none;
+    box-shadow: 0 1rem 4rem .5rem rgba(0,0,0,.05);
+    /* font-weight: 300; */
+}
+
+.btn-white .icon {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    display: inline-block;
+    background: var(--colorMain);
+    border-radius: 50%;
+    text-align: center;
+    color: var(--colorWhite);
+    margin-left: .5rem;
+}
+
+.btn-card {
+    display: inline-block;
+    padding: 1rem 1.3rem;
+    background: var(--colorMain);
+    border-radius: .4rem;
+    color: var(--colorWhite);
+    text-decoration: none;
+    box-shadow: 0 1rem 4rem .5rem rgba(0,0,0,.05);
+    /* font-weight: 300; */
+}
+
+.btn-card .icon {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    display: inline-block;
+    background: var(--colorWhite);
+    border-radius: 50%;
+    text-align: center;
+    color: var(--colorMain);
+    margin-left: .5rem;
+}
+
+.btn-section {
+    margin-left: 1rem;
+}
+
+.myImage {
+    display: none;
+}
+
+#label {
+    display: block;
+    width: 100%;
+    height: 4rem;
+    line-height: 4rem;
+    border: 1px solid var(--colorSilver);
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0 1.5rem;
+    position: relative;
+    font-weight: normal;
+}
+
+#label::after {
+    position: absolute;
+    content: "Choose Picture";
+    height: 100%;
+    width: auto;
+    top: -1px;
+    right: -1px;
+    border: 1px solid transparent;
+    padding: 0 1.5rem;
+    background-color: var(--colorMain);
+    color: var(--colorWhite);
+    font-weight: 400;
+}
+
+.alert {
+    display: inline-block;
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 1rem 1rem 5rem rgba(0,0,0,.05);
+
+}
+
+.alert-success .alert-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--colorWhite);
+    background-color: var(--greenColor);
+}
+
+.alert-success .alert-heading-text {
+    color: var(--greenColor);
+    display: inline-block;
+    margin-left: .6rem;
+    font-size: 1.4rem;
+    letter-spacing: .5px;
+}
+
+.alert-success .alert-body {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: var(--greenColor);
+}
+
+
+.alert-danger .alert-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--colorWhite);
+    background-color: var(--redColor);
+}
+
+.alert-danger .alert-heading-text {
+    color: var(--redColor);
+    display: inline-block;
+    margin-left: .6rem;
+    font-size: 1.4rem;
+    letter-spacing: .5px;
+}
+
+.alert-danger .alert-body {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: var(--redColor);
+}
+
+
+
+
+
+/* ======
+
+  Media Query
+
+====== */
+
+@media (max-width: 765px){
+     
+    nav#nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .form--header h2 {
+        font-size: 2.5rem;
+    }
+
+    .form-section {
+        width: 100%;
+    }
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .content {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .content-section {
+        margin-left: 0;
+    }
+
+}
