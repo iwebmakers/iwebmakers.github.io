@@ -386,7 +386,7 @@ img{
   justify-content: center;
   align-items: center;
   padding: .3rem;
-  background: rgba(6,156,84,.5);
+  background: rgba(64,82,112,.5);
   border-radius: .4rem;
   z-index: var(--z-tooltip);
   transition: .4s;
@@ -410,8 +410,10 @@ img{
 
 /*========== HOME ==========*/
 .home__container{
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh + var(--header-height));
   align-content: center;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 
 .home__title{
