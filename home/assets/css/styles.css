@@ -301,7 +301,7 @@ img{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color:var(--body-color);
+  background-color:var(--container-color);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -325,7 +325,7 @@ img{
 }
 
 .theme-inp:checked + .slider {
-  background-color:var(--body-color);
+  background-color:var(--container-color);
 }
 
 .theme-inp:focus + .slider {
