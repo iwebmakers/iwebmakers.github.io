@@ -176,6 +176,8 @@ img {
   position: absolute;
   z-index: 9998;
   background:var(--body-color);
+  top: 0;
+  left: 0;
 }
 
 .loader {
