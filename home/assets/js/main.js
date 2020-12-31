@@ -1,5 +1,6 @@
 // ================= Preloader ===================
-var colour;
+function updateMetaThemeColor() {
+    var colour;
     if(localStorage.getItem('selected-theme') == 'dark') {
         colour = '#1b2936'
     } else {
@@ -10,7 +11,8 @@ var colour;
     $('meta[name=theme-color]').remove();
     //add the new one
     $('head').append('<meta name="theme-color" content="'+colour+'">');
-
+}
+updateMetaThemeColor();
 window.onload = function () {
     //hide the preloader
     $(".loader").delay(2000).fadeOut("fast");
@@ -136,6 +138,7 @@ themeButton.addEventListener('click', () => {
     // Add or remove the dark / icon theme
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
+    updateMetaThemeColor();
 
     if ($('#theme-ico').hasClass('bx bxs-sun')) {
         $('#theme-ico').removeClass('bx bxs-sun');
@@ -144,17 +147,6 @@ themeButton.addEventListener('click', () => {
         $('#theme-ico').removeClass('bxs-moon');
         $('#theme-ico').addClass('bx bxs-sun');
     }
-    var colour;
-    if(localStorage.getItem('selected-theme') == 'dark') {
-        colour = '#1b2936'
-    } else {
-        colour = '#f7f7f7'
-    }
-
-    //remove the current meta
-    $('meta[name=theme-color]').remove();
-    //add the new one
-    $('head').append('<meta name="theme-color" content="'+colour+'">');
 
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
