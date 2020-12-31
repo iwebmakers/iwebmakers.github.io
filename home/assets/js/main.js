@@ -11,11 +11,9 @@ if (localStorage.getItem('selected-theme') === 'dark') {
 }
 if (localStorage.getItem('selected-theme') === 'dark') {
     document.getElementById('theme-button2').checked = true;
-    document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#1b2936');
 
 } else {
   document.getElementById('theme-button2').checked = false;
-  document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#f7f7f7');
 
 }
 
@@ -136,12 +134,6 @@ mthemeButton.addEventListener('click', () => {
     // Add or remove the dark / icon theme
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
-    if (selectedTheme = localStorage.getItem('selected-theme') == 'dark') {
-        document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#1b2936');
-
-    } else {
-        document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#f7f7f7');
-    }
       
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
