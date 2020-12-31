@@ -237,28 +237,6 @@ img{
     bottom: 1.5rem;
 }
 
-/*========== HOME ==========*/
-.home{
-    &__container{
-        height: calc(100vh - var(--header-height));
-        align-content: center;
-    }
-    &__title{
-        font-size: var(--biggest-font-size  );
-        color: var(--first-color);
-        margin-bottom: var(--mb-1);
-    }
-    &__subtitle{
-        font-size: var(--h1-font-size);
-        color: var(--title-color);
-        margin-bottom: var(--mb-4);
-    }
-    &__img{
-        width: 300px;
-        justify-self: center;
-    }
-}
-
 /*========== BUTTONS ==========*/
 .button{
     display: inline-block;

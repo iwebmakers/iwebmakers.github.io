@@ -1,4 +1,22 @@
-//<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+if (localStorage.getItem('selected-theme') === 'dark') {
+    document.getElementById('theme-button').checked = true;
+    $('#theme-ico').removeClass('bx bxs-sun');
+    $('#theme-ico').addClass('bx bxs-moon');
+
+} else {
+  document.getElementById('theme-button').checked = false;
+  $('#theme-ico').removeClass('bx bxs-moon');
+  $('#theme-ico').addClass('bx bxs-sun');
+
+}
+if (localStorage.getItem('selected-theme') === 'dark') {
+    document.getElementById('theme-button2').checked = true;
+} else {
+  document.getElementById('theme-button2').checked = false;
+}
+
+
+
 
 /*==================== SHOW MENU ====================*/
 const showMenu = (toggleId, navId) =>{
@@ -15,9 +33,10 @@ const showMenu = (toggleId, navId) =>{
 }
 showMenu('nav-toggle','nav-menu')
 
-  $('.nav-profile-button').click(function (e) { 
-      $('.profile-content').toggle();      
+  $('.nav-profile-button').click(function () { 
+      $('.profile-content').fadeToggle();      
   });
+
 
 
 /*==================== REMOVE MENU MOBILE ====================*/
@@ -68,6 +87,9 @@ window.addEventListener('scroll', scrollTop)
 
 /*==================== DARK LIGHT THEME ====================*/ 
 const themeButton = document.getElementById('theme-button')
+const mthemeButton = document.getElementById('theme-button2')
+
+const themeico = document.getElementById('theme-ico')
 const darkTheme = 'dark-theme'
 const iconTheme = 'bx-sun'
 
@@ -84,6 +106,7 @@ if (selectedTheme) {
   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
   themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme)
+ 
 }
 
 // Activate / deactivate the theme manually with the button
@@ -91,6 +114,33 @@ themeButton.addEventListener('click', () => {
     // Add or remove the dark / icon theme
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
+
+    if ($('#theme-ico').hasClass('bx bxs-sun')) {
+        $('#theme-ico').removeClass('bx bxs-sun');
+        $('#theme-ico').addClass('bx bxs-moon');
+    } else if($('#theme-ico').hasClass('bx bxs-moon')){
+        $('#theme-ico').removeClass('bxs-moon');
+        $('#theme-ico').addClass('bx bxs-sun');
+    }
+      
+    // We save the theme and the current icon that the user chose
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
+
+mthemeButton.addEventListener('click', () => {
+    // Add or remove the dark / icon theme
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+
+    if ($('#theme-ico').hasClass('bx bxs-sun')) {
+        $('#theme-ico').removeClass('bx bxs-sun');
+        $('#theme-ico').addClass('bx bxs-moon');
+    } else if($('#theme-ico').hasClass('bx bxs-moon')){
+        $('#theme-ico').removeClass('bxs-moon');
+        $('#theme-ico').addClass('bx bxs-sun');
+    }
+      
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())

@@ -165,7 +165,8 @@ img{
   display: none !important;
 }
 
-/*========== NAV ==========*/
+
+/*========== NAV ==========================================================================================================================================*/
 .nav{
   max-width: 1024px;
   height: var(--header-height);
@@ -207,7 +208,7 @@ img{
   display: none;
   position: absolute;
   right: 0;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   font-size: 18px;
   width: 250px;
   background-color: var(--container-color);
@@ -268,6 +269,93 @@ img{
   background-color: #3e8e41;
 }
 
+/*---------- Dark Mode Switch Style -----------*/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 23px;
+  float: right;
+  top: -28px;
+}
+.switch-ico{
+  position: relative;
+  float: right;
+  top: -26px;
+  left: -10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:var(--body-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 3px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px var(--body-color);
+  background: var(--text-color);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.theme-inp:checked + .slider {
+  background-color:var(--body-color);
+}
+
+.theme-inp:focus + .slider {
+  box-shadow: 0 0 1px var(--body-color);
+}
+
+.theme-inp:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(15px);
+  background: var(--text-color);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 20px;
+  border: 2px solid var(--text-color);
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+/* #2 switch ---++*/
+
+/* -------------------------------------------*/
 
 @media screen and (max-width: 900px ){
   .nav__menu{
@@ -315,6 +403,15 @@ img{
   .change-theme{
     display: block !important;
   }
+
+  .m-switch{
+    display: block !important;
+  }
+  .switch{
+    top: -40px;
+    left: -30px;
+  }
+  
 }
 
 .nav__item{
@@ -408,7 +505,15 @@ img{
   bottom: 1.5rem;
 }
 
-/*========== HOME ==========*/
+
+
+
+
+
+
+
+
+/*========== HOME ===============================================================================================================*/
 .home__container{
   height: calc(100vh + var(--header-height));
   align-content: center;
@@ -641,10 +746,7 @@ img{
 }
 
 @media screen and (min-width:400px){
-  .l-header{
-    /* padding-right: 0px;
-    padding-left: 0px; */
-  }
+
 }
 
 @media screen and (max-width:340px){
