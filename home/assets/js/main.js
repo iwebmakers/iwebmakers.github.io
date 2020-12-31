@@ -1,9 +1,18 @@
 // ================= Preloader ===================
+function updateMetaThemeColor() {
+    var colour;
+    if(localStorage.getItem('selected-theme') == 'dark') {
+        colour = '#f7f7f7'
+    } else {
+        colour = '#1b2936'
+    }
 
-// $(document).load(function() {
-// 	$(".loader").delay(2000).hide("slow");
-//   $("#overlayer").delay(2000).hide("slow");
-// })
+    //remove the current meta
+    $('meta[name=theme-color]').remove();
+    //add the new one
+    $('head').append('<meta name="theme-color" content="'+colour+'">');
+}
+updateMetaThemeColor();
 window.onload = function () {
     //hide the preloader
     $(".loader").delay(2000).fadeOut("fast");
