@@ -22,14 +22,14 @@ try {
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;   
-    $mail->Username   = 'mishaalmx@gmail.com';                     // SMTP username
-    $mail->Password   = 'Shua6120';                               // SMTP password
+    $mail->Username   = 'mishaalmuzammil@gmail.com';                     // SMTP username
+    $mail->Password   = 'goodmish1232';                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to 587
     echo("<script>console.log('PHP: done-declares-mail- ');</script>");
 
     //Recipients
-    $mail->setFrom('iwebwebmakers@gmail.com', 'Design Team');
+    $mail->setFrom('mishaalmx@gmail.com', 'Design Team');
     $mail->addAddress($email, $name);     // Add a recipient
 
     // Content
