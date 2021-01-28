@@ -1,7 +1,12 @@
-# Responsive Website Restaurant
-## [Watch it on youtube](https://youtu.be/5RIFrZEjURA)
+# How to Create a Modern Flat UI Design Dashboard in C# 2020
+## [Watch it on youtube](https://www.youtube.com/watch?v=vYDyGxoq9JU&t=6s)
 ### Responsive Website Restaurant
-Nice design of a responsive restaurant website 🥗 . It contains a header, home, about, services, menu, app, contact and a footer. It also has a fully developed light/dark mode 🌓 first for mobile then for desktop.
+Need some ideas or a simple design to make a Dashboard  in C#.
+This clean design will even work with your programming Projects or Assignments.
+This tutorial is suitable for beginners and advanced users too.
+
+If you are new to programming and you are using IDE like Visual Studio to build software, This video has shown every works step by step.
+Every System or application should have clean and clear dashboard to display the statics and details, so you can practice or look how things workout in this tutorial.
 
 Don't forget to join the channel for more videos like this.
-[Bedimcode](https://www.youtube.com/c/Bedimcode)
+[iWeb Makers](https://www.youtube.com/c/iwebMakers)
