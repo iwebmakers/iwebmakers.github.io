@@ -1,385 +1,181 @@
-
-//Content Link Variables
-var appendCode;
-var valPass;
-
-function getVars() {
-  switch (valPass) {
-    case 'display_current_date_time':
-      appendCode = '<iframe src="../user-content/Display-Current-Time-and-Date.php" class="content-frame" frameborder="0"></iframe>';
-      break;
-    case 'create-modern-dashboard-part-1':
-      appendCode = '<iframe src="demo.html" class="content-frame" frameborder="0"></iframe>';
-      break;
-    case 'create-modern-dashboard-part-2':
-      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
-      break;
-    case 'modern-design-splashscreen-in-c#':
-      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
-      break;
-    case 'send-emails-in-c#-1':
-      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
-      break;
-    case 'make-a-logo-free-5-mins':
-      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
-      break;
-    case 'how-to-get-free-website-themes':
-      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
-      break;
-    case 'how-to-make-money-$100':
-      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
-      break;
-    case 'recover-permanently-deleted-files-free-2020':
-      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
-      break;
-    case 'how-to-hack-wifi-get-password':
-      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
-      break;
-    case 'how-to-create-splashscreen-c#-2020':
-      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
-      break;
-    case 'create-login-form-in-c#-2020':
-      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
-      break;
-    case 'how-to-create-crystal-report-c#-2020':
-      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
-      break;
-    case 'iwebmakers-intro-launch-2019':
-      appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
-      break;
-    // case 'code':
-    //   appendCode = '<iframe src=".html" class="content-frame" frameborder="0"></iframe>';
-    //   break;
-    default:
-      appendCode = 'Could not get data';
-      break;
-  }
-}
-function scrltop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
-$(document).ready(function () {
-  $('.video-main-div .frm-content').click(function () {
-    valPass = this.id //pass buton id
-    getVars(); //checking id and assigning the specific iframe site for content
-    $('.temp_div').remove(); //delete the temp div element
-    event.preventDefault(); //do not remove this to avoid errors
-    $('.right-main-div').append(appendCode); //add the assigned iframe content
-    scrltop(); // scroll to top for better view.
-  });
-});
-
-var btn = $('#btn-scrl-top');
-
-$(window).scroll(function () {
-  if ($(window).scrollTop() > 550) {
-    btn.addClass('show-scrl-btn');
-  } else {
-    btn.removeClass('show-scrl-btn');
-  }
-  var ldiv_height = $(".left-main-div")[0].clientHeight;
-  var rdiv_height = $(".right-main-div")[0].clientHeight;
-
-
-  if (rdiv_height+100 > ldiv_height) {
-    if ($(window).scrollTop() > ldiv_height-$(window).height()+64) {
-      $('.left-main-div').addClass('toggle-fixed-left-div');
-      //alert(ldiv_height);
+// ================= Preloader ===================
+function updateMetaThemeColor() {
+    var colour;
+    if(localStorage.getItem('selected-theme') == 'dark') {
+        colour = '#1b2936'
     } else {
-      $('.left-main-div').removeClass('toggle-fixed-left-div');
+        colour = '#f7f7f7'
     }
-  }
-});
 
-btn.on('click', function (e) {
-  e.preventDefault();
-  $('html, body').animate({ scrollTop: 0 }, '300');
-});
-
-//End
-
-// main left div list Search Filter Script Start
-function mysearchlistFunction() {
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById("src-inp");
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("search-box-list");
-  li = ul.getElementsByClassName("src-list");
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByClassName("src-anc")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
+    //remove the current meta
+    $('meta[name=theme-color]').remove();
+    //add the new one
+    $('head').append('<meta name="theme-color" content="'+colour+'">');
 }
-// main left div list Search Filter Script end
-
-// login box show hide start
-$(".navigation-bar-login-div-Toggle").click(function () {
-  $('#navigation-bar-login-div-function').slideToggle();
-});
-// login box show hide End
-
-// Search box show hide start
-$(".unervisal-search-button-Toggle").click(function () {
-  $('#navigation-bar-search-div-function').slideToggle();
-});
-// Search box show hide end
-
-// Full Search Filter Script Start
-$("#uni-btn").click(function () {
-  var filter = $('#uni-src-inp').val(),
-    count = 0;
-  $('.video-main-div').each(function () {
-    if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-      $(this).fadeOut();
-    } else {
-      $(this).fadeIn('slow');
-      count++;
-    }
-  });
-  var resultVal = $("#res-val").val();
-  document.getElementById("res-val").innerHTML = resultVal;
-
-  if ($(window).width() <= 600) {
-    $('.navigation-bar-search').fadeOut();
-    $('.navigation-bar-login-div').fadeOut();
-  }
-
-  $('.clear-search-div').fadeIn();
-  $('.search-one-result').fadeIn();
-});
-
-$('#uni-src-inp').keypress(function (event) {
-  var keycode = (event.keyCode ? event.keyCode : event.which);
-  if (keycode == '13') {
-    var filter = $('#uni-src-inp').val(),
-      count = 0;
-    $('.video-main-div').each(function () {
-      if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-        $(this).fadeOut();
-      } else {
-        $(this).fadeIn('slow');
-        count++;
-      }
-    });
-    var resultVal = $("#result-val").val();
-    $("result-val").text(resultVal);
-
-    if ($(window).width() <= 600) {
-      $('.navigation-bar-search').fadeOut();
-      $('.navigation-bar-login-div').fadeOut();
-    }
-    $('.clear-search-div').fadeIn();
-    $('.search-one-result').fadeIn();
-  }
-});
-// Full Search Filter Script End
-
-// search box show hide start
-function searchboxshowhidefunction() {
-  var x = document.getElementById("navigation-bar-search-div-function");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+updateMetaThemeColor();
+window.onload = function () {
+    //hide the preloader
+    $(".loader").delay(2000).fadeOut("fast");
+    $("#overlayer").delay(2000).fadeOut("slow");
 }
-// search box show hide start
 
-//clear search
-// var blanktxt = $.trim( $('.unervisal-search-input').val() )
-var blanktxt = "";
-$('.clear-search-div').click(function () {
-  $('.unervisal-search-input').val(blanktxt);
-  $('.clear-search-div').fadeOut();
-  $('.search-one-result').fadeOut();
-  $('.video-main-div').fadeIn();
-});
 
-//Button pointer click
-$(function () {
+if (localStorage.getItem('selected-theme') === 'dark') {
+    document.getElementById('theme-button').checked = true;
+    $('#theme-ico').removeClass('bx bxs-sun');
+    $('#theme-ico').addClass('bx bxs-moon');
 
-  //creating a style object for the ripple effect
-  function RippleStyle(width, height, posX, posY) {
-    this.width = (width <= height) ? height : width;
-    this.height = (width <= height) ? height : width;
-    this.top = posY - (this.height * 0.5);
-    this.left = posX - (this.width * 0.5);
-  }
+} else {
+    document.getElementById('theme-button').checked = false;
+    $('#theme-ico').removeClass('bx bxs-moon');
+    $('#theme-ico').addClass('bx bxs-sun');
 
-  $('.button-animation').on('mousedown', function (e) {
-    //appending an element with a class name "btn-ripple"
-    var rippleEl = $('<span class="btn-ripple"></span>').appendTo(this);
-
-    //getting the button's offset position
-    var pos = $(this).offset();
-
-    //get the button's width and height
-    var width = $(this).outerWidth();
-    var height = $(this).outerHeight();
-
-    //get the cursor's x and y position within the button
-    var posX = e.pageX - pos.left;
-    var posY = e.pageY - pos.top;
-
-    //adding a css style to the ripple effect
-    var rippleStyle = new RippleStyle(width, height, posX, posY);
-    rippleEl.css(rippleStyle);
-  });
-
-  //this event listener will be triggered once the ripple animation is done
-  $('.button-animation').on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', '.button-animation-ripple', function () {
-    $(this).remove();
-  });
-});
-
-// main left div list Search Filter Script Start
-function mysearchlistFunction() {
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById("src-inp");
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("search-box-list");
-  li = ul.getElementsByClassName("src-list");
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByClassName("src-anc")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
 }
-// main left div list Search Filter Script end
+if (localStorage.getItem('selected-theme') === 'dark') {
+    document.getElementById('theme-button2').checked = true;
 
-//Tooltip Script Start
-$(document).ready(function () {
-  $('[data-toggle="tooltip"]').tooltip();
-});
-//tooltip script end
+} else {
+    document.getElementById('theme-button2').checked = false;
 
-// login box show hide start
-$(".navigation-bar-login-div-Toggle").click(function () {
-  $('#navigation-bar-login-div-function').slideToggle();
-});
-// login box show hide End
-
-// Search box show hide start
-$(".unervisal-search-button-Toggle").click(function () {
-  $('#navigation-bar-search-div-function').slideToggle();
-});
-// Search box show hide end
-
-// Full Search Filter Script Start
-$("#uni-btn").click(function () {
-  var filter = $('#uni-src-inp').val(),
-    count = 0;
-  $('.video-main-div').each(function () {
-    if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-      $(this).fadeOut();
-    } else {
-      $(this).fadeIn('slow');
-      count++;
-    }
-  });
-  var resultVal = $("#res-val").val();
-  document.getElementById("res-val").innerHTML = resultVal;
-
-  if ($(window).width() <= 600) {
-    $('.navigation-bar-search').fadeOut();
-    $('.navigation-bar-login-div').fadeOut();
-  }
-
-  $('.clear-search-div').fadeIn();
-  $('.search-one-result').fadeIn();
-});
-
-$('#uni-src-inp').keypress(function (event) {
-  var keycode = (event.keyCode ? event.keyCode : event.which);
-  if (keycode == '13') {
-    var filter = $('#uni-src-inp').val(),
-      count = 0;
-    $('.video-main-div').each(function () {
-      if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-        $(this).fadeOut();
-      } else {
-        $(this).fadeIn('slow');
-        count++;
-      }
-    });
-    var resultVal = $("#result-val").val();
-    $("result-val").text(resultVal);
-
-    if ($(window).width() <= 600) {
-      $('.navigation-bar-search').fadeOut();
-      $('.navigation-bar-login-div').fadeOut();
-    }
-    $('.clear-search-div').fadeIn();
-    $('.search-one-result').fadeIn();
-  }
-});
-// Full Search Filter Script End
-
-// search box show hide start
-function searchboxshowhidefunction() {
-  var x = document.getElementById("navigation-bar-search-div-function");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
 }
-// search box show hide start
 
-//clear search
-// var blanktxt = $.trim( $('.unervisal-search-input').val() )
-var blanktxt = "";
-$('.clear-search-div').click(function () {
-  $('.unervisal-search-input').val(blanktxt);
-  $('.clear-search-div').fadeOut();
-  $('.search-one-result').fadeOut();
-  $('.video-main-div').fadeIn();
+
+
+
+/*==================== SHOW MENU ====================*/
+const showMenu = (toggleId, navId) => {
+    const toggle = document.getElementById(toggleId),
+        nav = document.getElementById(navId)
+
+    // Validate that variables exist
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+            // We add the show-menu class to the div tag with the nav__menu class
+            nav.classList.toggle('show-menu')
+        })
+    }
+}
+showMenu('nav-toggle', 'nav-menu')
+
+$('.nav-profile-button').click(function () {
+    $('.profile-content').fadeToggle();
 });
 
-//Button pointer click
-$(function () {
 
-  //creating a style object for the ripple effect
-  function RippleStyle(width, height, posX, posY) {
-    this.width = (width <= height) ? height : width;
-    this.height = (width <= height) ? height : width;
-    this.top = posY - (this.height * 0.5);
-    this.left = posX - (this.width * 0.5);
-  }
 
-  $('.button-animation').on('mousedown', function (e) {
-    //appending an element with a class name "btn-ripple"
-    var rippleEl = $('<span class="btn-ripple"></span>').appendTo(this);
+/*==================== REMOVE MENU MOBILE ====================*/
+const navLink = document.querySelectorAll('.nav__link')
 
-    //getting the button's offset position
-    var pos = $(this).offset();
+function linkAction() {
+    const navMenu = document.getElementById('nav-menu')
+    // When we click on each nav__link, we remove the show-menu class
+    navMenu.classList.remove('show-menu')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
 
-    //get the button's width and height
-    var width = $(this).outerWidth();
-    var height = $(this).outerHeight();
+/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const sections = document.querySelectorAll('section[id]')
 
-    //get the cursor's x and y position within the button
-    var posX = e.pageX - pos.left;
-    var posY = e.pageY - pos.top;
+function scrollActive() {
+    const scrollY = window.pageYOffset
 
-    //adding a css style to the ripple effect
-    var rippleStyle = new RippleStyle(width, height, posX, posY);
-    rippleEl.css(rippleStyle);
-  });
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        sectionId = current.getAttribute('id')
 
-  //this event listener will be triggered once the ripple animation is done
-  $('.button-animation').on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', '.button-animation-ripple', function () {
-    $(this).remove();
-  });
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+        } else {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
+
+/*==================== CHANGE BACKGROUND HEADER ====================*/
+function scrollHeader() {
+    const nav = document.getElementById('header')
+    // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
+    if (this.scrollY >= 200) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+}
+window.addEventListener('scroll', scrollHeader)
+
+/*==================== SHOW SCROLL TOP ====================*/
+function scrollTop() {
+    const scrollTop = document.getElementById('scroll-top');
+    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+    if (this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollTop)
+
+/*==================== DARK LIGHT THEME ====================*/
+const themeButton = document.getElementById('theme-button')
+const mthemeButton = document.getElementById('theme-button2')
+
+const themeico = document.getElementById('theme-ico')
+const darkTheme = 'dark-theme'
+const iconTheme = 'bx-sun'
+
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// We obtain the current theme that the interface has by validating the dark-theme class
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun'
+
+// We validate if the user previously chose a topic
+if (selectedTheme) {
+    // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+    themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme)
+
+}
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+    // Add or remove the dark / icon theme
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+    updateMetaThemeColor();
+
+    if ($('#theme-ico').hasClass('bx bxs-sun')) {
+        $('#theme-ico').removeClass('bx bxs-sun');
+        $('#theme-ico').addClass('bx bxs-moon');
+    } else if ($('#theme-ico').hasClass('bx bxs-moon')) {
+        $('#theme-ico').removeClass('bxs-moon');
+        $('#theme-ico').addClass('bx bxs-sun');
+    }
+
+    // We save the theme and the current icon that the user chose
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
+
+mthemeButton.addEventListener('click', () => {
+    // Add or remove the dark / icon theme
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+
+    // We save the theme and the current icon that the user chose
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
+
+/*==================== SCROLL REVEAL ANIMATION ====================*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 2000,
+    reset: true
 });
+
+sr.reveal(`.home__data, .home__img,
+            .about__data, .about__img,
+            .services__content, .menu__content,
+            .app__data, .app__img,
+            .contact__data, .contact__button,
+            .footer__content`, {
+    interval: 200
+})
